@@ -13,14 +13,13 @@ ul{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     transition: all 0.5s ease;
-    width: 300px;  
-    height: 155px; 
+    width: 300px;
+    height: 155px;
     z-index: 3;
 }
 .content {
-    margin-top: 110vh; 
+    margin-top: 110vh;
     padding: 20px;
     font-size: 18px;
 }
@@ -29,8 +28,8 @@ ul{
     top: 30px;
     left: 30px;
     transform: translate(0, 0);
-    width: 150px; 
-    height: 26px; 
+    width: 150px;
+    height: 26px;
 }
 #word {
     color: rgb(255, 255, 255); /* Change the color here */
@@ -38,14 +37,13 @@ ul{
   
 /* For Search button*/
 .searchBox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:  translate(-50%,50%);
+
+    
+
     background: #275595;
-    height: z0px;
+    height: 30px;
     border-radius: 40px;
-    padding: 10px;
+    padding:5px;
 
 }
 
@@ -60,10 +58,12 @@ ul{
 }
 
 .searchButton {
+    position: relative;
+    
     color: white;
     float: right;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: #2f3640;
     display: flex;
@@ -98,10 +98,11 @@ ul{
     position: fixed;
     top: 0px;
     right: 0px; 
-    display: none; /* Hide by default */
-    padding-top: 20px;
+    display: flex; /* Hide by default */
+    
+    padding-top: 10px;
     width: 100%;
-    height: 70px;
+    height: 80px;
     background-color: #000000;
 }
 
@@ -119,6 +120,7 @@ ul{
 /* Navbar right section */
 .navright {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     padding: 5px;
     margin-right: 20px;
