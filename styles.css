@@ -24,9 +24,12 @@ p{
     z-index: 3;
 }
 .content {
-    margin-top: 110vh;
+    margin-top: 140vh;
     padding: 20px;
     font-size: 18px;
+    display: grid;
+    grid-template-columns: 0.5fr 3.5fr 1.5fr;
+
 }
 
 .scrolled-up .svg-container {
@@ -57,23 +60,25 @@ p{
 
 .searchBox:hover > .searchButton {
   background: white;
-  color : #2f3640;
+  color : #737373;
 }
 
 .fa-search {
     position: relative;
-    color: white;
+    color: rgb(97, 97, 97);
     float: right;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #2f3640;
+    background: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.4s;
 }
-
+.fa-search:hover{
+    color: white;
+}
 .searchInput {
     border:none;
     background: none;
@@ -87,8 +92,6 @@ p{
     width: 0px;
 
 }
-
-
 @media screen and (max-width: 620px) {
 .searchBox:hover > .searchInput {
     width: 150px;
@@ -191,6 +194,9 @@ svg:hover {
     z-index: 0;
     cursor: pointer;
 }
+.navbar a:hover{
+    color:#ffffff
+}
 div.nav-desktop a:before, div.nav-desktop a:after
 {
     position: absolute;
@@ -224,6 +230,7 @@ div.nav-desktop a:hover:before, div.nav-desktop a:hover:after
 li {
     list-style-type: none;
 }
+
 
 
 
