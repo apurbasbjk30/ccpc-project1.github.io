@@ -87,6 +87,8 @@ p{
     width: 0px;
 
 }
+
+
 @media screen and (max-width: 620px) {
 .searchBox:hover > .searchInput {
     width: 150px;
