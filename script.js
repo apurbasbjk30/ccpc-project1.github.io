@@ -1,5 +1,5 @@
 
-let lastScrollTop = 0;
+let lastScrollTop = 20;
 
 window.addEventListener('scroll', function() {
     const svgContainer = document.querySelector('.svg-container');
@@ -9,11 +9,7 @@ window.addEventListener('scroll', function() {
     const wordDiv = document.getElementById('word');
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-<<<<<<< Updated upstream
-    if (Math.abs(scrollTop - lastScrollTop) >= 130) {
-=======
-    if (scrollTop < 500) {
->>>>>>> Stashed changes
+    if (scrollTop < 200) {
         if (scrollTop < lastScrollTop) {
             document.body.classList.add('scrolled-up');
             svgElement.src = 'logo.svg';
@@ -22,11 +18,7 @@ window.addEventListener('scroll', function() {
             svgContainer.style.transform = 'translate(-50%, -50%)';
             svgContainer.style.width = '250px';
             svgContainer.style.height = '22px';
-<<<<<<< Updated upstream
-            navButtons.style.display = 'none'; 
-=======
             navButtons.style.display = 'none';
->>>>>>> Stashed changes
             //outputDiv.style.display = 'block';
             wordDiv.style.fontSize = '28px';
             
@@ -43,30 +35,17 @@ window.addEventListener('scroll', function() {
             wordDiv.style.fontSize = '14px';
             
         }
-<<<<<<< Updated upstream
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
-=======
->>>>>>> Stashed changes
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
 
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
 function printSentenceWithBlinking(sentences) {
     const output = document.getElementById("word");
     let sentenceIndex = 0;
     let index = 0;
     let printInterval;
-<<<<<<< Updated upstream
-  
-=======
->>>>>>> Stashed changes
     function printWithBlinkingUnderscore() {
       const currentSentence = sentences[sentenceIndex];
       printInterval = setInterval(() => {
@@ -85,10 +64,6 @@ function printSentenceWithBlinking(sentences) {
         }
       }, 200); // Adjust interval for faster printing
     }
-<<<<<<< Updated upstream
-  
-=======
->>>>>>> Stashed changes
     function removeBackward(sentence) {
       printInterval = setInterval(() => {
         if (index >= 0) {
@@ -121,8 +96,6 @@ function printSentenceWithBlinking(sentences) {
   
   printSentenceWithBlinking(sentences); // Call the function with the array of sentences
   
-<<<<<<< Updated upstream
-=======
 //navigation
 //for responsive navbar
 function toggleNav() {
@@ -150,4 +123,3 @@ document.addEventListener('click', function(event) {
         bars.classList.remove("change");
     }
 });
->>>>>>> Stashed changes
