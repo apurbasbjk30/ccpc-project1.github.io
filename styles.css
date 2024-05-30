@@ -24,13 +24,26 @@ p{
     z-index: 3;
 }
 .content {
-    margin-top: 140vh;
+    margin-top: 120vh;
     padding: 20px;
     font-size: 18px;
-    display: grid;
-    grid-template-columns: 0.5fr 3.5fr 1.5fr;
+    display: flex;
+    flex-direction: column;
 
 }
+.content1 {
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+
+}
+.content2{
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr;
+
+}
+
 
 .scrolled-up .svg-container {
     top: 30px;
@@ -40,7 +53,9 @@ p{
     height: 26px;
 }
 #word {
-    color: rgb(255, 255, 255); /* Change the color here */
+    color: rgb(255, 255, 255); 
+    font-size: 28px;
+    /* Change the color here */
   }
   
 /* For Search button*/
@@ -113,6 +128,7 @@ p{
     padding-top: 10px;
     width: 100%;
     height: 80px;
+    z-index: 3;
     background-color: #000000;
 }
 
@@ -231,6 +247,183 @@ li {
     list-style-type: none;
 }
 
+.left1 {
+    position: relative;
+    
+  }
+  .circle-container {
+    width: 100%;
+    height: 100vh; /* Full height viewport */
+    position: relative; /* For absolute positioning of inner circles */
+  }
+  .dotted-circle {
+    left: -50%;
+    width: 100%; /* 50% of the container's width */
+    height: 70%;
+    padding-bottom: 0%; /* This makes the element's height equal to its width */
+    border: 5px dotted rgb(114, 114, 114); /* Border width and style */
+    border-radius: 50%; /* Makes it a circle */
+    position: relative; /* For absolute positioning of inner circles */
+  }
+  .small-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* 10% of the large circle's width */
+    height: 80px; /* Keep it square */
+    background-color: #275595; /* Color of the small circles */
+    border-radius: 50%; /* Make it a circle */
+    position: relative;
+  transition: all 0.5s ease;/
+  }
+
+  /* Calculate positions using trigonometry for 35-degree intervals */
+  .circle3 {
+    top: 65%; /* Center vertically */
+    left: 99%; /* Rightmost point */
+    transform: translate(-50%, -50%);
+  }
+  .circle2 {
+    top: 0%; /* 50% - 50% * sin(35deg) */
+    left: 85%; /* 50% + 50% * cos(35deg) */
+    transform: translate(-50%, -50%);
+  }
+  .circle1 {
+    top: 9%; /* 50% - 50% * sin(70deg) */
+    left: 99%; /* 50% + 50% * cos(70deg) */
+    transform: translate(-50%, -50%);
+  }
+  .circle4 {
+    top: 45%; /* Center vertically */
+    left: 85%; /* 50% + 50% * cos(105deg) */
+    transform: translate(-50%, -50%);
+  }
+
+.circle-obj{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* 10% of the large circle's width */
+    height: 60px; /* Keep it square */
+    background-color: #000000; /* Color of the small circles */
+    border-radius: 50%;
+}
+
+#CcpC{
+    color: #fcfcfc;
+    font-size: 40px;
+    font-family: 'Segoe U';
+}
+
+.right1{
+position: relative;
+
+}
+.box-detail-C1{
+    background-color: #58a0c9;
+    position: absolute;
+    left: 10px;
+    top:20px;
+    height: 25%;
+    width: 30%;
+}
+.box-detail-c{
+    background-color: #58a0c9;
+    position: absolute;
+    left: 40%;
+    top: 20px;;
+    height: 25%;
+    width: 35%;
+}
+.box-detail-p{
+    background-color: #58a0c9;
+    position: absolute;
+    left: 15%;
+    top:40%;
+
+    height: 25%;
+    width: 25%;
+}
+
+.box-detail-C2{
+    background-color: #58a0c9;
+    position: absolute;
+    left: 60%;
+    top:40%;
+    height: 25%;
+    width: 35%;
+}
+
+
+    .right2 {
+        position: relative;
+        right: 0;
+    }
+    .notification {
+        position: sticky;
+       
+        /* Add any other styling properties you need */
+        background-color: rgba(255, 255, 0, 0); /* Just for visibility */
+        padding: 10px;
+      }
+
+.obj1{
+    position: relative;
+    top: 0px;
+    left:10px;
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(135deg, #93b1eb 5%, #000000 100%);}
+.obj2{
+    position: absolute;
+    top: 0px;
+    left:0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 0% 0% 100% 0%;
+    background-color: rgb(23, 23, 23);
+
+}
+.obj3{
+    position: absolute;
+    top: 0px;
+    left:30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 0% 0% 0% 100% ;
+    background-color:  rgb(23, 23, 23);
+
+}
+.obj4{
+    position: absolute;
+    top: 30px;
+    left:0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 0% 100% 0% 0% ;
+    background-color:  rgb(23, 23, 23);
+}
+.obj5{
+    position: absolute;
+    top: 30px;
+    left:30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100% 0% 0% 0% ;
+    background-color:  rgb(23, 23, 23);
+}
+
+.title-notifc{
+    position: relative;
+    color: #0277bd;
+    font-size: 24px;
+    font-family: serif;
+    font-weight: bold;
+    margin: 0;
+    top:15px;
+    left:70px
+
+}
 
 
 
@@ -240,9 +433,7 @@ li {
 
 
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 430px) {
     html,
     body {
       background-size: cover;
