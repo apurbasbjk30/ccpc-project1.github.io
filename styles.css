@@ -24,17 +24,21 @@ p{
     z-index: 3;
 }
 .content {
-    margin-top: 120vh;
-    padding: 20px;
+    margin-top: 130vh;
     font-size: 18px;
     display: flex;
     flex-direction: column;
 
 }
 .content1 {
+    position: relative;
     font-size: 18px;
     display: grid;
+    top:-30px;
+    left:0;
+    margin:0;
     grid-template-columns: 0.5fr 1fr;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 
 }
 .content2{
@@ -257,7 +261,7 @@ li {
     position: relative; /* For absolute positioning of inner circles */
   }
   .dotted-circle {
-    left: -50%;
+    left: -70%;
     width: 100%; /* 50% of the container's width */
     height: 70%;
     padding-bottom: 0%; /* This makes the element's height equal to its width */
@@ -274,7 +278,7 @@ li {
     background-color: #275595; /* Color of the small circles */
     border-radius: 50%; /* Make it a circle */
     position: relative;
-  transition: all 0.5s ease;/
+  transition: all 0.5s ease;
   }
 
   /* Calculate positions using trigonometry for 35-degree intervals */
@@ -316,30 +320,41 @@ li {
 }
 
 .right1{
+    display: none;
+    transition: all 0.5s ease;
 position: relative;
 
 }
 .box-detail-C1{
+   
     background-color: #58a0c9;
     position: absolute;
-    left: 10px;
-    top:20px;
+    left: -150px;
+    top:9px;
     height: 25%;
     width: 30%;
+}
+h2{
+    margin: 0%;
+    margin-left: 20px;
+}
+#right1{
+    margin-left: 20px;
+    margin-right: 10px;
 }
 .box-detail-c{
     background-color: #58a0c9;
     position: absolute;
-    left: 40%;
-    top: 20px;;
+    left: 50vh;
+    top: 10vh;;
     height: 25%;
     width: 35%;
 }
 .box-detail-p{
     background-color: #58a0c9;
     position: absolute;
-    left: 15%;
-    top:40%;
+    left: 40vh;
+    top:40vh;
 
     height: 25%;
     width: 25%;
@@ -348,8 +363,8 @@ position: relative;
 .box-detail-C2{
     background-color: #58a0c9;
     position: absolute;
-    left: 60%;
-    top:40%;
+    left:-200px;
+    top:50vh;
     height: 25%;
     width: 35%;
 }
