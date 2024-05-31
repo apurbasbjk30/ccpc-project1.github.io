@@ -32,13 +32,14 @@ p{
 }
 .content1 {
     position: relative;
+    padding-top:30px ;
     font-size: 18px;
     display: grid;
     top:-30px;
     left:0;
     margin:0;
     grid-template-columns: 0.5fr 1fr;
-    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    background-image: linear-gradient(45deg, #fa709a 0%, #fee140 70%, #d3fd4b80 100%);
 
 }
 .content2{
@@ -326,48 +327,71 @@ position: relative;
 
 }
 .box-detail-C1{
-   
+
     background-color: #58a0c9;
     position: absolute;
-    left: -150px;
-    top:9px;
-    height: 25%;
-    width: 30%;
+    left: 0px;
+    top:50px;
+    height: 260px;
+    width: 260px;
+    border-radius: 70% 70% 0% 70% ;
+    padding:10px 20px 10px 20px;
+    background-image: linear-gradient(-45deg, #fa709a 0%, #fee140 100%);
+    box-shadow:-4px 0 8px rgba(0, 0, 0, 0.3), /* Left shadow */
+                0 -4px 8px rgba(0, 0, 0, 0.3); /* Top shadow */
 }
-h2{
-    margin: 0%;
-    margin-left: 20px;
-}
-#right1{
-    margin-left: 20px;
-    margin-right: 10px;
-}
+
 .box-detail-c{
     background-color: #58a0c9;
     position: absolute;
-    left: 50vh;
-    top: 10vh;;
-    height: 25%;
-    width: 35%;
+    left: 31.28%;
+    top: 50px;;
+    height: 260px;
+    width: 260px;
+    border-radius: 70% 70% 70% 0%  ;
+    padding:10px 20px 10px 20px;
+    background-image: linear-gradient(45deg, #fa709a 0%, #fee140 100%);
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3), /* Right shadow */
+              0 -4px 8px rgba(0, 0, 0, 0.3); /* Top shadow */
 }
 .box-detail-p{
     background-color: #58a0c9;
     position: absolute;
-    left: 40vh;
-    top:40vh;
-
-    height: 25%;
-    width: 25%;
+    left: 31.28%;
+    top:42%;
+    height: 260px;
+    width: 260px;
+    border-radius: 0% 70% 70% 70% ;
+    padding:10px 20px 10px 20px;
+    background-image: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3), /* Right shadow */
+              0 4px 8px rgba(0, 0, 0, 0.3); /* bottom shadow */
 }
 
 .box-detail-C2{
     background-color: #58a0c9;
     position: absolute;
-    left:-200px;
-    top:50vh;
-    height: 25%;
-    width: 35%;
+    left:0%;
+    top:42%;
+    height: 260px;
+    width: 260px;
+    border-radius: 70% 0% 70% 70% ;
+    padding:10px 20px 10px 20px;
+    background-image: linear-gradient(-135deg, #fa709a 0%, #fee140 100%);
+    box-shadow:-4px 0 8px rgba(0, 0, 0, 0.3), /* Left shadow */
+              0 4px 8px rgba(0, 0, 0, 0.3); /* bottom shadow */
 }
+
+h2{
+    padding:10px 20px 0px 20px;
+    margin-bottom: 0px;
+}
+#right1{
+    padding-left:25px;
+    margin-right: 10px;
+}
+
+
 
 
     .right2 {
