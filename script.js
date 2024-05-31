@@ -149,12 +149,13 @@ window.addEventListener('scroll', () => {
   const circle2 = document.querySelector('.circle2');
   const circle3 = document.querySelector('.circle3');
   const circle4 = document.querySelector('.circle4');
-
+  const right1Div = document.querySelector('.right1');
   const start = windowHeight / 2; // Start animation when scrolled halfway down the viewport
   const end = windowHeight; // End animation when the viewport height is reached
 
   if (scrollPosition >= start && scrollPosition <= end) {
     const progress = (scrollPosition - start) / (end - start);
+
 
     circle3.style.left = `${progress * 99}%`;
     circle3.style.top = `${65 - (65 - 38) * progress}%`;
@@ -193,5 +194,10 @@ window.addEventListener('scroll', () => {
 
     circle4.style.left = `84%`;
     circle4.style.top = `45%`;
+  }
+  if (scrollPosition > end) {
+    right1Div.style.display = 'block';
+  } else {
+    right1Div.style.display = 'none';
   }
 });
