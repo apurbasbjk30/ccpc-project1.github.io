@@ -14,52 +14,21 @@ p{
 }
 
 .svg-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s ease;
-    width: 300px;
-    height: 110px;
-    z-index: 3;
+    position:absolute;
+    top:15px;
+    left:50px
 }
 .content {
-    margin-top: 130vh;
+    margin-top:0;
     font-size: 18px;
     display: flex;
     flex-direction: column;
 
 }
-.content1 {
-    position: relative;
-    padding-top:30px ;
-    font-size: 18px;
-    display: grid;
-    top:-30px;
-    left:0;
-    margin:0;
-    grid-template-columns: 0.5fr 1fr;
-    background-image: linear-gradient(45deg, #fa709a 0%, #fee140 70%, #d3fd4b80 100%);
 
-}
-.content2{
-    font-size: 18px;
-    display: grid;
-    grid-template-columns: 2.5fr 1.5fr;
-
-}
-
-
-.scrolled-up .svg-container {
-    top: 30px;
-    left: 30px;
-    transform: translate(0, 0);
-    width: 150px;
-    height: 26px;
-}
 #word {
     color: rgb(255, 255, 255); 
-    font-size: 28px;
+    font-size: 14px;
     /* Change the color here */
   }
   
@@ -128,13 +97,14 @@ p{
     position: fixed;
     top: 0px;
     right: 0px; 
-    display: none; /* Hide by default */
-    
-    padding-top: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
     width: 100%;
-    height: 80px;
+    height: 90px;
     z-index: 3;
     background-color: #000000;
+    
 }
 
 .scrolled .navbar {
@@ -252,237 +222,17 @@ li {
     list-style-type: none;
 }
 
-.left1 {
-    position: relative;
-    
-  }
-  .circle-container {
-    width: 100%;
-    height: 100vh; /* Full height viewport */
-    position: relative; /* For absolute positioning of inner circles */
-  }
-  .dotted-circle {
-    left: -70%;
-    width: 100%; /* 50% of the container's width */
-    height: 70%;
-    padding-bottom: 0%; /* This makes the element's height equal to its width */
-    border: 5px dotted rgb(114, 114, 114); /* Border width and style */
-    border-radius: 50%; /* Makes it a circle */
-    position: relative; /* For absolute positioning of inner circles */
-  }
-  .small-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px; /* 10% of the large circle's width */
-    height: 80px; /* Keep it square */
-    background-color: #275595; /* Color of the small circles */
-    border-radius: 50%; /* Make it a circle */
-    position: relative;
-  transition: all 0.5s ease;
-  }
-
-  /* Calculate positions using trigonometry for 35-degree intervals */
-  .circle3 {
-    top: 65%; /* Center vertically */
-    left: 99%; /* Rightmost point */
-    transform: translate(-50%, -50%);
-  }
-  .circle2 {
-    top: 0%; /* 50% - 50% * sin(35deg) */
-    left: 85%; /* 50% + 50% * cos(35deg) */
-    transform: translate(-50%, -50%);
-  }
-  .circle1 {
-    top: 9%; /* 50% - 50% * sin(70deg) */
-    left: 99%; /* 50% + 50% * cos(70deg) */
-    transform: translate(-50%, -50%);
-  }
-  .circle4 {
-    top: 45%; /* Center vertically */
-    left: 85%; /* 50% + 50% * cos(105deg) */
-    transform: translate(-50%, -50%);
-  }
-
-.circle-obj{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px; /* 10% of the large circle's width */
-    height: 60px; /* Keep it square */
-    background-color: #000000; /* Color of the small circles */
-    border-radius: 50%;
-}
-
-#CcpC{
-    color: #fcfcfc;
-    font-size: 40px;
-    font-family: 'Segoe U';
-}
-
-.right1{
-    display: none;
-    transition: all 0.5s ease;
-position: relative;
-
-}
-.box-detail-C1{
-
-    background-color: #58a0c9;
-    position: absolute;
-    left: 0px;
-    top:50px;
-    height: 260px;
-    width: 260px;
-    border-radius: 70% 70% 0% 70% ;
-    padding:10px 20px 10px 20px;
-    background-image: linear-gradient(-45deg, #fa709a 0%, #fee140 100%);
-    box-shadow:-4px 0 8px rgba(0, 0, 0, 0.3), /* Left shadow */
-                0 -4px 8px rgba(0, 0, 0, 0.3); /* Top shadow */
-}
-
-.box-detail-c{
-    background-color: #58a0c9;
-    position: absolute;
-    left: 31.28%;
-    top: 50px;;
-    height: 260px;
-    width: 260px;
-    border-radius: 70% 70% 70% 0%  ;
-    padding:10px 20px 10px 20px;
-    background-image: linear-gradient(45deg, #fa709a 0%, #fee140 100%);
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3), /* Right shadow */
-              0 -4px 8px rgba(0, 0, 0, 0.3); /* Top shadow */
-}
-.box-detail-p{
-    background-color: #58a0c9;
-    position: absolute;
-    left: 31.28%;
-    top:42%;
-    height: 260px;
-    width: 260px;
-    border-radius: 0% 70% 70% 70% ;
-    padding:10px 20px 10px 20px;
-    background-image: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3), /* Right shadow */
-              0 4px 8px rgba(0, 0, 0, 0.3); /* bottom shadow */
-}
-
-.box-detail-C2{
-    background-color: #58a0c9;
-    position: absolute;
-    left:0%;
-    top:42%;
-    height: 260px;
-    width: 260px;
-    border-radius: 70% 0% 70% 70% ;
-    padding:10px 20px 10px 20px;
-    background-image: linear-gradient(-135deg, #fa709a 0%, #fee140 100%);
-    box-shadow:-4px 0 8px rgba(0, 0, 0, 0.3), /* Left shadow */
-              0 4px 8px rgba(0, 0, 0, 0.3); /* bottom shadow */
-}
-
-h2{
-    padding:10px 20px 0px 20px;
-    margin-bottom: 0px;
-}
-#right1{
-    padding-left:25px;
-    margin-right: 10px;
-}
 
 
-
-
-    .right2 {
-        position: relative;
-        right: 0;
-    }
-    .notification {
-        position: sticky;
-       
-        /* Add any other styling properties you need */
-        background-color: rgba(255, 255, 0, 0); /* Just for visibility */
-        padding: 10px;
-      }
-
-.obj1{
-    position: relative;
-    top: 0px;
-    left:10px;
-    height: 60px;
-    width: 60px;
-    background: linear-gradient(135deg, #93b1eb 5%, #000000 100%);}
-.obj2{
-    position: absolute;
-    top: 0px;
-    left:0px;
-    height: 30px;
-    width: 30px;
-    border-radius: 0% 0% 100% 0%;
-    background-color: rgb(23, 23, 23);
-
-}
-.obj3{
-    position: absolute;
-    top: 0px;
-    left:30px;
-    height: 30px;
-    width: 30px;
-    border-radius: 0% 0% 0% 100% ;
-    background-color:  rgb(23, 23, 23);
-
-}
-.obj4{
-    position: absolute;
-    top: 30px;
-    left:0px;
-    height: 30px;
-    width: 30px;
-    border-radius: 0% 100% 0% 0% ;
-    background-color:  rgb(23, 23, 23);
-}
-.obj5{
-    position: absolute;
-    top: 30px;
-    left:30px;
-    height: 30px;
-    width: 30px;
-    border-radius: 100% 0% 0% 0% ;
-    background-color:  rgb(23, 23, 23);
-}
-
-.title-notifc{
-    position: relative;
-    color: #0277bd;
-    font-size: 24px;
-    font-family: serif;
-    font-weight: bold;
-    margin: 0;
-    top:15px;
-    left:70px
-
-}
-
-
-
-
-
-
-
-
-
-@media (max-width: 430px) {
+@media (max-width:932px) {
     html,
     body {
       background-size: cover;
     }
-    .scrolled-up .svg-container {
-        top: 30px;
-        left: 50px;
-        transform: translate(0, 0);
-        width: 10px; 
-  
+    
+    .svg-container {
+       display: block;
+       z-index: 5;
     }
     .navbar{
         width: 100%;
@@ -498,6 +248,7 @@ h2{
     padding: 10px;
     position: fixed; /* Make the navbar fixed */
     top: 0;
+    margin-right: 0;
     width: 100%;
     z-index: 3;
   }
