@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <link href="event_style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="cont">
+		<!-- Navigation buttons -->
+		<div class ="navbar "><!-- Fixed Navigation Bar all buttons on right side-->
+			<div class="svg-container">
+				<img src="navlogo.svg" alt="Logo" id="mySVG">
+				<div id="output">
+					<span id="word"></span>
+				</div>
+			</div>
+			<div class ="navright">
+				<div class="searchBox">
+					<input class="searchInput"type="text" name="" placeholder="Search...">
+						<i class="fas fa-search" onclick="toggleSearch"></i>
+				</div>
+				<!-- Desktop view navigation -->
+				<div class="nav-desktop ">
+					<a href="index.html" id="home">Home</a>
+					<a href="events.html">Events</a>
+					<a href="projects.html">Projects</a>
+					<a href="blogs.html">Blogs</a>
+					<a href="members.html">Members</a>
+					<a href="contact.html">Reach Us</a>
+				
+				</div>
+			<!-- Responsive view navigation -->
+				<div class="nav-responsive" id="myNav">
+					<a href="index.html">Home</a>
+					<a href="events.html">Events</a>
+					<a href="projects.html">Projects</a>
+					<a href="blogs.html">Blogs</a>
+					<a href="members.html">Members</a>
+					<a href="contact.html">Reach Us</a>
+				</div>
+				<div class="container" onclick="toggleNav()">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</div>
+		</div>
+			
+			<div class="content">
+			</div>
+		</div>
+	
+
+
+
+
+
+    <div class="wrapper">
+
+		<div class="card">
+
+			<div class="face front">
+				<img src="Gavin Nelson.jfif">
+				<h1 class="text-h1">Event 1</h1>
+			</div>
+
+			<div class="face back">
+				<h2 class="text-h2">GitHub basics and Collaborative coding</h2>
+				<p class="text-p">
+					
+				</p>
+				<div class="links">
+					<a class="link-a" href="Blogs.html">Details</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="card">
+
+			<div class="face front">
+				<img src="UI Design 3D Illustration.jfif">
+				<h1 class="text-h1">Event 2</h1>
+			</div>
+
+			<div class="face back">
+				<h2 class="text-h2">Computer Graphics & Future Outlook</h2>
+				<p class="text-p">
+					
+				</p>
+				<div class="links">
+					<a class="link-a" href="blogs.html">Details</a>
+				</div>
+			</div>
+
+		</div>
+
+		
+	</div>
+    
+
+	<script src="event_script.js"></script>
+</body>
+</html>
