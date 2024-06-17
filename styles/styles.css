@@ -259,12 +259,13 @@ li {
   .searchBox {
     position: relative;
     background: #275595;
-    height: 20px;
+    height: 25px;
     border-radius: 40px;
     right: 20px;
     padding:7px;
 
 }
+
 
 .searchBox:hover > .searchInput {
     width: 240px;
