@@ -14,7 +14,7 @@ window.addEventListener('scroll', function() {
   if (scrollTop <= 0) {
       // Scroll position is at or near the top
       document.body.classList.add('scrolled-up');
-      svgElement.src = 'logo.svg';
+      svgElement.src = 'img/logo.svg';
       svgContainer.style.top = '44.5%';
       svgContainer.style.left = '48.5%';
       svgContainer.style.transform = 'translate(-50%, -50%)';
@@ -28,7 +28,7 @@ window.addEventListener('scroll', function() {
   } else {
       // Scroll position is not at the top
       document.body.classList.remove('scrolled-up');
-      svgElement.src = 'navlogo.svg';
+      svgElement.src = 'img/navlogo.svg';
       svgContainer.style.top = '10px';
       svgContainer.style.left = '50px';
       svgContainer.style.transform = 'translate(0, 0)';
