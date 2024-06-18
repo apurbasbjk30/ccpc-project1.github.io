@@ -444,7 +444,6 @@ border-radius: 50px 0 0 50px;
 .content3{
   margin: 0px 15px 0px 0px ;
   background-image: linear-gradient(-45deg, #EA4335 0%, #FBBC05 50%, #34A853 75%, #4285F4 100%);
-
   display: grid;
   grid-template-columns: 1.5fr 1fr;
 
@@ -452,12 +451,11 @@ border-radius: 50px 0 0 50px;
 
 .right3 img{
   width: 100%;
-  height: auto;
 }
 .left3{
   position: relative;
   background-color: #f1f1f100;
-  top:5%;
+
   
 }
 .Soc-detail1{
@@ -487,13 +485,97 @@ margin: 5px;
 
 .content4{
   display: grid;
-  grid-template-columns: 2fr 0.5fr;
+  grid-template-columns: 2fr 1fr;
   background-image: linear-gradient(to right, #999999 0%, #999999 20% , #ffbdd1 100%);
   margin:15px 0px 15px 15px ;
 }
 .left4{
   padding: 20px;
 }
+
+
+.Studentbody{
+  display: grid;
+  grid-template-columns: 1fr ;
+  
+  height: 45vh;
+  background-color: #ffffff00;
+
+
+}
+.image-frame {
+ display: flex;
+ position: relative;
+}
+
+.image-frame img {
+  height: auto;
+  display: block;
+}
+
+.center-image {
+  max-width: 210px ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+}
+
+.top-left-image {
+  max-width: 190px;
+ position: absolute;
+ top: 55%;
+ left: 34%;
+ transform: translate(-55%, -52%);
+}
+
+.top-right-image {
+  max-width: 190px;
+  position: absolute;
+ top: 55%;
+ left: 65.5%;
+ transform: translate(-45%, -53%);
+}
+
+.bottom-image {
+  max-width: 185px;
+  position: absolute;
+ top: 54%;
+ left: 82%;
+ transform: translate(-55%, -52%);
+}
+.bottom-left-image {
+  max-width: 190px;
+  position: absolute;
+ top: 55%;
+ left: 17%;
+ transform: translate(-50%, -53%);
+}
+
+.bottom-right-image {
+  max-width: 190px;
+  position: absolute;
+  top: 42%;
+  left: 59.5%;
+  transform: translate(-55%, -52%);
+}
+
+.left-image {
+  max-width: 195px;
+  position: absolute;
+  top: 42%;
+  left: 42%;
+  transform: translate(-55%, -52%);
+ 
+}
+
+.right-image {
+  max-width: 200px;
+  position: absolute;
+}
+
+
+
 @media (max-width:932px) {
     html,
     body {
@@ -798,4 +880,36 @@ margin: 2px;
 #soc{
   font-size: 20px;
 }
+.content4{
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: linear-gradient(to right, #999999 0%, #999999 20% , #ffbdd1 100%);
+  margin:15px 0px 15px 15px ;
 }
+.left4{
+  padding: 20px;
+}
+
+
+.Studentbody{
+  height: 70vh;
+  width: 100%;
+  background-color: #ffffff00;
+
+
+}
+.image-frame img {
+  height: auto;
+  display: block;
+  max-width: 150px;
+}
+.center-image {
+  max-width: 170px !important ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+}
+
+}
+
