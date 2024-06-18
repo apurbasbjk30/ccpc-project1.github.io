@@ -106,3 +106,24 @@ window.addEventListener('scroll', () => {
     right1Div.style.display = 'none';
   }
 });
+
+
+    // JavaScript for slideshow functionality
+    var slideIndex = 0;
+    var slides = document.getElementsByClassName("slide-container");
+
+    // Function to show slides
+    function showSlides() {
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  // Hide all slides initially
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;  // Reset index if it exceeds number of slides
+        }
+        slides[slideIndex - 1].style.display = "block";  // Display the current slide
+        setTimeout(showSlides, 2000);  // Change image every 2 seconds
+    }
+
+    // Call the showSlides function to start the slideshow
+    showSlides();
