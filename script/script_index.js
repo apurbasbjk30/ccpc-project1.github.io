@@ -127,3 +127,4 @@ window.addEventListener('scroll', () => {
 
     // Call the showSlides function to start the slideshow
     showSlides();
+    
