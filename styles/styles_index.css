@@ -678,7 +678,36 @@ h2{
     margin-top: 0px;
 
 }
-
-
+.content2{
+  margin: 0px 0px 15px 15px;
+  background-image: linear-gradient(to left, #999999 0%, #32564f80 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#slideshow-container {
+  position: relative;
+  max-width: 80%;
+  overflow: hidden;
+  border: 10px solid #ccc; /* Border style with 10px width */
+  border-radius: 8px; /* Rounded corners */
+  position: relative; /* Ensure relative positioning for absolutely positioned elements */
+}
+.event-box{
+  background-color: #e297ae;
+  height: calc(100% - 40px);
+  width: calc(100% - 20px);
+  margin-left: auto;
+  border-radius: 50px 0 0 50px;
+  }
+#Event {
+  font-size: 28px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+#right2{
+  font-size: 18px;
+  padding: 0;
+  margin:2px;
+}
 
 }
