@@ -128,14 +128,14 @@ window.addEventListener('scroll', () => {
     // Call the showSlides function to start the slideshow
     showSlides();
     // Initial text for the terminal with a placeholder for the red text
-const initialText = `Ccpc:~$ ./start-team.sh\n
-Loading project dependencies... Done\n
-Setting up virtual environment... Done\n
+const initialText = `Ccpc:~$ ./<span class="red-text">start-team.sh</span>\n
+Loading project dependencies... <span class="red-text">Done</span>\n
+Setting up virtual environment... <span class="red-text">Done</span>\n
 Retrieving team member data...\n
 <span class="red-text">Download completed (320 KB in 1s)</span>\n
 Initializing member profiles...\n
 Member profiles loaded successfully!\n
-Click on the images to view detailed profiles `;
+<span class="green-text">Click on the images to view detailed profiles </span>`;
 
 // Details of each student
 const studentDetails = {
@@ -169,7 +169,7 @@ function typeText(element, text, callback) {
 // Function to display details when an image is clicked
 function displayDetail(studentName) {
     const student = studentDetails[studentName];
-    const detailText = `const TeamMember {\n\tname: ${student.name};\n\trole: ${student.role};\n\tcontact: <a href="${student.linkedin}" target="_blank"><img src="img/linkedin_icon.png" alt="LinkedIn" style="width:16px; height:16px;"></a>;\n}; `;
+    const detailText = `const TeamMember {\n\tname: ${student.name};\n\trole: ${student.role};\n\tcontact: <a href="${student.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>;\n}; `;
     const terminalElement = document.getElementById('studentbody');
     typeText(terminalElement, detailText);
 }
