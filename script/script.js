@@ -95,3 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
       searchInput.blur();
   });
 });
+
+
+//searchbox
