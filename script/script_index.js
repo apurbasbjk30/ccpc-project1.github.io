@@ -127,4 +127,55 @@ window.addEventListener('scroll', () => {
 
     // Call the showSlides function to start the slideshow
     showSlides();
-    
+    // Initial text for the terminal with a placeholder for the red text
+const initialText = `Ccpc:~$ ./<span class="red-text">start-team.sh</span>\n
+Loading project dependencies... <span class="red-text">Done</span>\n
+Setting up virtual environment... <span class="red-text">Done</span>\n
+Retrieving team member data...\n
+<span class="red-text">Download completed (320 KB in 1s)</span>\n
+Initializing member profiles...\n
+Member profiles loaded successfully!\n
+<span class="green-text">Click on the images to view detailed profiles </span>`;
+
+// Details of each student
+const studentDetails = {
+    Sandeep: { name: "Sandeep", role: "Executive", linkedin: "https://www.linkedin.com/in/sandeep" },
+    Om: { name: "Om Vishesh", role: "Executive", linkedin: "https://www.linkedin.com/in/om" },
+    Reyaz: { name: "Reyaz", role: "Executive", linkedin: "https://www.linkedin.com/in/reyaz" },
+    AdityaSC: { name: "Aditya SC", role: "Executive", linkedin: "https://www.linkedin.com/in/aditya" },
+    Priyanshu: { name: "Priyanshu", role: "Executive", linkedin: "https://www.linkedin.com/in/priyanshu" },
+    Abhimaan: { name: "Abhimaan", role: "Executive", linkedin: "https://www.linkedin.com/in/abhimaan" },
+    Krish: { name: "Krish", role: "Executive", linkedin: "https://www.linkedin.com/in/krish" }
+};
+
+// Function to type out text
+function typeText(element, text, callback) {
+    let i = 0;
+    function typing() {
+        // Use a temporary div to avoid HTML entities being displayed
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = text.substring(0, i + 1);
+        element.innerHTML = tempDiv.innerHTML + '<span class="blinking-cursor">_</span>';
+        i++;
+        if (i < text.length) {
+            setTimeout(typing, 50);  // Adjust typing speed here
+        } else {
+            if (callback) callback();
+        }
+    }
+    typing();
+}
+
+// Function to display details when an image is clicked
+function displayDetail(studentName) {
+    const student = studentDetails[studentName];
+    const detailText = `const TeamMember {\n\tname: ${student.name};\n\trole: ${student.role};\n\tcontact: <a href="${student.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>;\n}; `;
+    const terminalElement = document.getElementById('studentbody');
+    typeText(terminalElement, detailText);
+}
+
+// When the page loads, type out the initial text
+document.addEventListener('DOMContentLoaded', function() {
+    const terminalElement = document.getElementById('studentbody');
+    typeText(terminalElement, initialText);
+});
