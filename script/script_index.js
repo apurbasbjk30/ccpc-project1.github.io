@@ -127,7 +127,7 @@ window.addEventListener('scroll', () => {
 
     // Call the showSlides function to start the slideshow
     showSlides();
-    // Initial text for the terminal with a placeholder for the red text
+// Initial text for the terminal with a placeholder for the red text
 const initialText = `Ccpc:~$ ./<span class="red-text">start-team.sh</span>\n
 Loading project dependencies... <span class="red-text">Done</span>\n
 Setting up virtual environment... <span class="red-text">Done</span>\n
@@ -139,20 +139,19 @@ Member profiles loaded successfully!\n
 
 // Details of each student
 const studentDetails = {
-    Sandeep: { name: "Sandeep", role: "Executive", linkedin: "https://www.linkedin.com/in/sandeep" },
-    Om: { name: "Om Vishesh", role: "Executive", linkedin: "https://www.linkedin.com/in/om" },
-    Reyaz: { name: "Reyaz", role: "Executive", linkedin: "https://www.linkedin.com/in/reyaz" },
-    AdityaSC: { name: "Aditya SC", role: "Executive", linkedin: "https://www.linkedin.com/in/aditya" },
-    Priyanshu: { name: "Priyanshu", role: "Executive", linkedin: "https://www.linkedin.com/in/priyanshu" },
-    Abhimaan: { name: "Abhimaan", role: "Executive", linkedin: "https://www.linkedin.com/in/abhimaan" },
-    Krish: { name: "Krish", role: "Executive", linkedin: "https://www.linkedin.com/in/krish" }
+    Sandeep: { name: "Sandeep", role: "Executive", linkedin: "https://www.linkedin.com/in/sandeep", github: "https://github.com/sandeep" },
+    Om: { name: "Om Vishesh", role: "Executive", linkedin: "https://www.linkedin.com/in/om", github: "https://github.com/om" },
+    Reyaz: { name: "Reyaz", role: "Executive", linkedin: "https://www.linkedin.com/in/reyaz", github: "https://github.com/reyaz" },
+    AdityaSC: { name: "Aditya SC", role: "Executive", linkedin: "https://www.linkedin.com/in/adityasc2004/", github: "https://github.com/adityasc2004" },
+    Priyanshu: { name: "Priyanshu", role: "Executive", linkedin: "https://www.linkedin.com/in/priyanshuverma17/", github: "https://github.com/PriyanshuV17" },
+    Abhimaan: { name: "Abhimaan", role: "Executive", linkedin: "https://www.linkedin.com/in/abhimaan", github: "https://github.com/abhimaan" },
+    Krish: { name: "Krish", role: "Executive", linkedin: "https://www.linkedin.com/in/krish", github: "https://github.com/Imkkrish" }
 };
 
 // Function to type out text
 function typeText(element, text, callback) {
     let i = 0;
     function typing() {
-        // Use a temporary div to avoid HTML entities being displayed
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = text.substring(0, i + 1);
         element.innerHTML = tempDiv.innerHTML + '<span class="blinking-cursor">_</span>';
@@ -169,13 +168,26 @@ function typeText(element, text, callback) {
 // Function to display details when an image is clicked
 function displayDetail(studentName) {
     const student = studentDetails[studentName];
-    const detailText = `const TeamMember {\n\tname: ${student.name};\n\trole: ${student.role};\n\tcontact: <a href="${student.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>;\n}; `;
+    const detailText = `const TeamMember {\n\tname: ${student.name};\n\trole: ${student.role};\n\tcontact: <a href="${student.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>\t<a href="${student.github}" target="_blank"><i class="fab fa-github"></i></a>;\n}; `;
     const terminalElement = document.getElementById('studentbody');
     typeText(terminalElement, detailText);
 }
 
-// When the page loads, type out the initial text
-document.addEventListener('DOMContentLoaded', function() {
-    const terminalElement = document.getElementById('studentbody');
-    typeText(terminalElement, initialText);
-});
+// Function to start typing initial text when content4 is in view
+function startTypingWhenScrolled() {
+    const content4 = document.querySelector('.content4');
+    const rect = content4.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+    if (rect.top <= windowHeight && rect.bottom >= 0) {
+        const terminalElement = document.getElementById('studentbody');
+        typeText(terminalElement, initialText);
+        window.removeEventListener('scroll', startTypingWhenScrolled); // Remove event listener after typing starts
+    }
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', startTypingWhenScrolled);
+
+// Check once on DOM content loaded in case content4 is already in view
+document.addEventListener('DOMContentLoaded', startTypingWhenScrolled);
