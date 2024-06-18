@@ -39,14 +39,6 @@ body, html {
     background-image: linear-gradient(45deg, #fa709a 0%, #fee140 70%, #d3fd4b80 100%);
 
 }
-.content2{
-    font-size: 18px;
-    display: grid;
-    grid-template-columns: 2.5fr 1.5fr;
-
-}
-
-
 .scrolled-up .svg-container {
     top: 30px;
     left: 30px;
@@ -389,22 +381,12 @@ h2{
     padding-left:25px;
     margin-right: 10px;
 }
-
-
-
-
-    .right2 {
-        position: relative;
-        right: 0;
-    }
-    .notification {
-        position: sticky;
-       
-        /* Add any other styling properties you need */
-        background-color: rgba(255, 255, 0, 0); /* Just for visibility */
-        padding: 10px;
-      }
-
+.content2{
+    margin: 10px 0px 0px 20px;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
 
 
 
