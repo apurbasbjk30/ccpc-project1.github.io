@@ -441,9 +441,17 @@ border-radius: 50px 0 0 50px;
   align-items: center;
   justify-content: center;
 }
+.content3{
+  margin: 0px 15px 15px 0px ;
+  background-image: linear-gradient(to left, #999999 0%, #32564f80 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-
-
+.left3{
+  height: 200px;
+  width: auto;
+}
 
 
 
