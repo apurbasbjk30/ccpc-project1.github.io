@@ -574,6 +574,42 @@ margin: 5px;
   max-width: 200px;
   position: absolute;
 }
+.terminal {
+  display: block;
+  background-color: #1e1e1e;
+  color: #c5c8c6;
+  font-family: 'Monaco', monospace;
+  padding: 20px;
+  width: 600px;;
+  height: 380px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  overflow: auto;
+  line-height: 1.2;
+}
+
+
+.red-text {
+  color: #ff5f56;
+}
+.green-text {
+  color: rgb(0, 128, 0);
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking-cursor {
+  font-weight: bold;
+  font-size: 1em;
+  color: #c5c8c6;
+  animation: blink 1s step-end infinite;
+}
 
 
 
@@ -601,7 +637,7 @@ margin: 5px;
     align-items: center;
     background:black;
     padding: 5px;
-    position: fixed; /* Make the navbar fixed */
+    position: fixed;
     top: 0;
     width: 100%;
     margin-right: 0;
@@ -881,11 +917,12 @@ margin: 2px;
 #soc{
   font-size: 20px;
 }
-.content4{
-  display: grid;
+.content4 {
+  display: flex;
   grid-template-columns: 1fr;
-  background-image: linear-gradient(to right, #999999 0%, #999999 20% , #ffbdd1 100%);
-  margin:15px 0px 15px 15px ;
+  background-image: linear-gradient(to right, #999999 0%, #999999 20%, #ffbdd1 100%);
+  margin: 15px 0px 15px 15px;
+  flex-direction: column-reverse;
 }
 .left4{
   padding: 20px;
@@ -912,24 +949,23 @@ margin: 2px;
   transform: translate(-50%, -47%);
 }
 
-}
 .terminal {
   display: block;
-  background-color: #1e1e1e; /* macOS terminal dark background */
-  color: #c5c8c6; /* macOS terminal text color */
-  font-family: 'Monaco', monospace; /* macOS terminal font */
+  background-color: #1e1e1e;
+  color: #c5c8c6;
+  font-family: 'Monaco', monospace;
   padding: 20px;
-  width: 600px; /* Fixed width */
-  height: 380px; /* Fixed height */
-  border-radius: 10px; /* Rounded corners */
+  width:90%;
+  height: 270px;
+  border-radius: 10px;
   margin: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  overflow: auto; /* Scrollable if content overflows */
-  line-height: 1.2; /* Adjust line height to reduce gap */
-}
+  overflow: auto;
+  line-height: 1;
 
+}
 .red-text {
   color: #ff5f56; /* macOS terminal red text color */
 }
@@ -945,4 +981,6 @@ margin: 2px;
   font-size: 1em;
   color: #c5c8c6; /* Cursor color matches the text color */
   animation: blink 1s step-end infinite;
+}
+
 }
