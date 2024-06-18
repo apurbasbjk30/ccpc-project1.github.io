@@ -110,7 +110,7 @@ body, html {
 
 .highlight {
     background-color: yellow;
-    transition: background-color 1s ease;
+    font-weight: bold;
 }
 /* Base styles for the navbar */
 .navbar {
@@ -382,11 +382,54 @@ h2{
     margin-right: 10px;
 }
 .content2{
-    margin: 10px 0px 0px 20px;
-    background-color: antiquewhite;
+    margin: 0px 0px 15px 15px;
+    background-image: linear-gradient(to left, #999999 0%, #32564f80 100%);
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
+.left2{
+    display: flex;
+  flex-wrap:wrap;
+  grid-template-columns: 1fr 1fr;
+  justify-content: left;
+  align-items: flex-start;
+  background-color: #f1f1f100;
+  padding: 20px;
+  margin-left : 20px;
+}
+#slideshow-container {
+  position: relative;
+  max-width: 90%;
+  overflow: hidden;
+  border: 10px solid #ccc; /* Border style with 10px width */
+  border-radius: 8px; /* Rounded corners */
+  position: relative; /* Ensure relative positioning for absolutely positioned elements */
+}
+#slideshow {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slide-container {
+  position: relative;
+}
+
+.slide {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ccc; /* Background color of the overlay */
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 0 9px 0 0px; /* Rounded corners */
+}
+
 
 
 
