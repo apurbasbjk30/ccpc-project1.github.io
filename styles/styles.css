@@ -88,10 +88,6 @@ p{
 }
 }
 
-.highlight {
-    background-color: yellow;
-    transition: background-color 1s ease;
-}
 /* Base styles for the navbar */
 .navbar {
     position: fixed;
