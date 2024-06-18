@@ -582,8 +582,8 @@ margin: 5px;
   padding: 20px;
   width: 600px;;
   height: 380px;
-  border-radius: 10px;
-  margin: 10px;
+  border-radius: 0 0px 10px 10px;
+  margin: 0 10px 10px 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   white-space: pre-wrap;
   overflow-wrap: break-word;
@@ -591,26 +591,47 @@ margin: 5px;
   line-height: 1.2;
 }
 
-
-.red-text {
-  color: #ff5f56;
-}
-.green-text {
-  color: rgb(0, 128, 0);
+.blinking-cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: #d4d4d4;
+  animation: blink 1s infinite;
 }
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+  0%, 100% { background-color: #d4d4d4; }
+  50% { background-color: transparent; }
 }
-
-.blinking-cursor {
-  font-weight: bold;
-  font-size: 1em;
-  color: #c5c8c6;
-  animation: blink 1s step-end infinite;
+.red-text {
+  color: red;
 }
-
+.green-text {
+  color: green;
+}
+/* Additional styling to simulate Mac terminal */
+.terminal-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #333;
+  padding: 5px;
+  margin: 10px 10px 0px 10px;
+  border-radius: 5px 5px 0 0;
+}
+.terminal-header .button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.button.red {
+  background-color: #ff5f56;
+}
+.button.yellow {
+  background-color: #ffbd2e;
+}
+.button.green {
+  background-color: #27c93f;
+}
 
 
 @media (max-width:932px) {
@@ -955,10 +976,10 @@ margin: 2px;
   color: #c5c8c6;
   font-family: 'Monaco', monospace;
   padding: 20px;
-  width:90%;
+  width:auto;
   height: 270px;
-  border-radius: 10px;
-  margin: 10px;
+  border-radius: 0 0px 10px 10px;
+  margin: 0 10px 10px 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   white-space: pre-wrap;
   overflow-wrap: break-word;
