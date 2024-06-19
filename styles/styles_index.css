@@ -496,7 +496,7 @@ margin: 5px;
 
 .Studentbody{
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-rows: 1fr 2fr;
   
   height: 400px;
   background-color: #ffffff00;
