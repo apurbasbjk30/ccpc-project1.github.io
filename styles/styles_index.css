@@ -512,8 +512,6 @@ margin: 5px;
   height: auto;
   display: block;
   border-radius: 50% 50% 0 0;
-}
-.image-frame img {
   cursor: pointer;
   transition: box-shadow 0.2s;
 }
