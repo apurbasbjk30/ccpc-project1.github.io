@@ -486,7 +486,7 @@ margin: 5px;
 .content4{
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-image: linear-gradient(to right, #999999 0%, #999999 20% , #ffbdd1 100%);
+  background-image: linear-gradient(to right,#f0ede5 0%, #ffbdd1 100%);
   margin:15px 0px 15px 15px ;
 }
 .left4{
@@ -593,6 +593,7 @@ margin: 5px;
   overflow-wrap: break-word;
   overflow: auto;
   line-height: 1.2;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
 }
 
 .blinking-cursor {
@@ -620,6 +621,7 @@ margin: 5px;
   padding: 5px;
   margin: 10px 10px 0px 10px;
   border-radius: 5px 5px 0 0;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
 }
 .terminal-header .button {
   width: 12px;
