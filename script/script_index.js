@@ -139,12 +139,12 @@ Member profiles loaded successfully!\n
 
 // Details of each student
 const studentDetails = {
-    Sandeep: { name: "Sandeep", role: "Executive", linkedin: "https://www.linkedin.com/in/sandeep", github: "https://github.com/sandeep" },
+    Sandeep: { name: "Sandeep", role: "Executive", linkedin: "https://www.linkedin.com/in/sandeep-mahato-a31b4a256/", github: "https://github.com/sandeepmahato1" },
     Om: { name: "Om Vishesh", role: "Executive", linkedin: "https://www.linkedin.com/in/om", github: "https://github.com/om" },
-    Reyaz: { name: "Reyaz", role: "Executive", linkedin: "https://www.linkedin.com/in/reyaz", github: "https://github.com/reyaz" },
+    Reyaz: { name: "Md. Reyaz Haider", role: "Executive", linkedin: "#", github: "#"},
     AdityaSC: { name: "Aditya SC", role: "Executive", linkedin: "https://www.linkedin.com/in/adityasc2004/", github: "https://github.com/adityasc2004" },
     Priyanshu: { name: "Priyanshu", role: "Executive", linkedin: "https://www.linkedin.com/in/priyanshuverma17/", github: "https://github.com/PriyanshuV17" },
-    Abhimaan: { name: "Abhimaan", role: "Executive", linkedin: "https://www.linkedin.com/in/abhimaan", github: "https://github.com/abhimaan" },
+    Abhimaan: { name: "Abhimaan", role: "Executive", linkedin: "https://www.linkedin.com/in/abhimaan-kumar-287262247/", github: "https://github.com/Abhimaan-kumar" },
     Krish: { name: "Krish", role: "Executive", linkedin: "https://www.linkedin.com/in/imkkrish/", github: "https://github.com/Imkkrish" }
 };
 
