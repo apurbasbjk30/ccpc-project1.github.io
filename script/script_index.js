@@ -141,7 +141,7 @@ Member profiles loaded successfully!\n
 const studentDetails = {
     Sandeep: { name: "Sandeep", role: "Executive", linkedin: "https://www.linkedin.com/in/sandeep-mahato-a31b4a256/", github: "https://github.com/sandeepmahato1" },
     Om: { name: "Om Vishesh", role: "Executive", linkedin: "https://www.linkedin.com/in/om", github: "https://github.com/om" },
-    Reyaz: { name: "Md. Reyaz Haider", role: "Executive", linkedin: "#", github: "#"},
+    Reyaz: { name: "Md. Reyaz Haider", role: "Executive", linkedin: "#", github: "#" },
     AdityaSC: { name: "Aditya SC", role: "Executive", linkedin: "https://www.linkedin.com/in/adityasc2004/", github: "https://github.com/adityasc2004" },
     Priyanshu: { name: "Priyanshu", role: "Executive", linkedin: "https://www.linkedin.com/in/priyanshuverma17/", github: "https://github.com/PriyanshuV17" },
     Abhimaan: { name: "Abhimaan", role: "Executive", linkedin: "https://www.linkedin.com/in/abhimaan-kumar-287262247/", github: "https://github.com/Abhimaan-kumar" },
@@ -159,10 +159,31 @@ function typeText(element, text, callback) {
         if (i < text.length) {
             setTimeout(typing, 50);  // Adjust typing speed here
         } else {
+            element.innerHTML = tempDiv.innerHTML; // Remove cursor after typing
             if (callback) callback();
         }
     }
     typing();
+}
+
+let typingQueue = [];
+let isTyping = false;
+
+function processQueue() {
+    if (typingQueue.length > 0 && !isTyping) {
+        isTyping = true;
+        const { element, text, callback } = typingQueue.shift();
+        typeText(element, text, () => {
+            isTyping = false;
+            if (callback) callback();
+            processQueue();
+        });
+    }
+}
+
+function queueTypeText(element, text, callback) {
+    typingQueue.push({ element, text, callback });
+    processQueue();
 }
 
 // Function to display details when an image is clicked
@@ -170,7 +191,7 @@ function displayDetail(studentName) {
     const student = studentDetails[studentName];
     const detailText = `const TeamMember {\n\tname: ${student.name};\n\trole: ${student.role};\n\tcontact: <a href="${student.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>  <a href="${student.github}" target="_blank"><i class="fab fa-github"></i></a>;\n}; `;
     const terminalElement = document.getElementById('studentbody');
-    typeText(terminalElement, detailText);
+    queueTypeText(terminalElement, detailText);
 }
 
 // Function to start typing initial text when content4 is in view
@@ -181,7 +202,7 @@ function startTypingWhenScrolled() {
 
     if (rect.top <= windowHeight && rect.bottom >= 0) {
         const terminalElement = document.getElementById('studentbody');
-        typeText(terminalElement, initialText);
+        queueTypeText(terminalElement, initialText);
         window.removeEventListener('scroll', startTypingWhenScrolled); // Remove event listener after typing starts
     }
 }
