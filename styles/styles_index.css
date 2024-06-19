@@ -512,8 +512,12 @@ margin: 5px;
   height: auto;
   display: block;
   border-radius: 50% 50% 0 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
 }
-
+.image-frame img:hover {
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.7));
+}
 .center-image {
   max-width: 210px ;
   position: absolute;
