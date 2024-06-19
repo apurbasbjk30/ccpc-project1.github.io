@@ -145,7 +145,7 @@ const studentDetails = {
     AdityaSC: { name: "Aditya SC", role: "Executive", linkedin: "https://www.linkedin.com/in/adityasc2004/", github: "https://github.com/adityasc2004" },
     Priyanshu: { name: "Priyanshu", role: "Executive", linkedin: "https://www.linkedin.com/in/priyanshuverma17/", github: "https://github.com/PriyanshuV17" },
     Abhimaan: { name: "Abhimaan", role: "Executive", linkedin: "https://www.linkedin.com/in/abhimaan", github: "https://github.com/abhimaan" },
-    Krish: { name: "Krish", role: "Executive", linkedin: "https://www.linkedin.com/in/krish", github: "https://github.com/Imkkrish" }
+    Krish: { name: "Krish", role: "Executive", linkedin: "https://www.linkedin.com/in/imkkrish/", github: "https://github.com/Imkkrish" }
 };
 
 // Function to type out text
@@ -168,7 +168,7 @@ function typeText(element, text, callback) {
 // Function to display details when an image is clicked
 function displayDetail(studentName) {
     const student = studentDetails[studentName];
-    const detailText = `const TeamMember {\n\tname: ${student.name};\n\trole: ${student.role};\n\tcontact: <a href="${student.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>\t<a href="${student.github}" target="_blank"><i class="fab fa-github"></i></a>;\n}; `;
+    const detailText = `const TeamMember {\n\tname: ${student.name};\n\trole: ${student.role};\n\tcontact: <a href="${student.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>  <a href="${student.github}" target="_blank"><i class="fab fa-github"></i></a>;\n}; `;
     const terminalElement = document.getElementById('studentbody');
     typeText(terminalElement, detailText);
 }
