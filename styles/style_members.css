@@ -133,6 +133,7 @@
 
 .custom-link {
     display: flex;
+    justify-content: space-evenly;
     margin-top: 5px;
     color: #0073e6;
     text-decoration: none;
