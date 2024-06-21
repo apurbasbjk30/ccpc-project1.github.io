@@ -32,16 +32,19 @@ const members = [
   { name: "VIDIT MISHRA", contactCard: "https://vidit2406.github.io/vidit_Contact_card/" }
 ];
 
+// const alumni = [
+//   {
+//       name: "Alumni 1",
+//       contactCard: "",
+//       leetcode: "",
+//       linkedin: "/"
+//   },
+//   // Add other alumni here
+// ];
 const alumni = [
   {
-      name: "Alumni 1",
-      contactCard: "",
-      leetcode: "",
-      linkedin: "/"
-  },
-  // Add other alumni here
-];
 
+  }];
 function generateMemberList(members, containerId) {
   const container = document.getElementById(containerId);
   container.innerHTML = ''; // Clear existing content
