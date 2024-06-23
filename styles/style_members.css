@@ -4,20 +4,23 @@
   top:120px;
   display: flex;
  justify-content: space-around;
- 
+ z-index: 2;
 }
 
 .middle-body {
   position: relative;
-  top:120px;
-  display: grid;
-  grid-template-rows:1fr ;
-  height: 100%;
-  
+  display: flex;
+  justify-content: center;
+
 }
 
 .default-content {
+    position: absolute;
+    top: 200px;
+    display: flex;
 
+    align-items: center;
+    justify-content: center;
     border: 1px solid #ff000000;
     background-color: #ffffff00;
     border-radius: 15px;
@@ -51,15 +54,6 @@
   font-size: 24px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 
-}
-
-
-.middle-body {
-    position: relative;
-    top: 120px;
-    display: grid;
-    grid-template-rows: 1fr;
-    height: 100%;
 }
 
 .default-content {
@@ -107,10 +101,15 @@
 }
 
 .members-list {
+    position: absolute;
     display: none;
+    top:110px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     justify-items: center;
+    z-index: 2;
+    background-color: #132228b7;
+    border-radius: 10px;
 }
 
 .member {
@@ -142,4 +141,8 @@
 .custom-link:hover {
     text-decoration: underline;
     color:#fff
+}
+#starfield{
+    z-index: 1;
+    background-color: black;
 }
