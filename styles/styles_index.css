@@ -35,7 +35,7 @@ body, html {
     display: grid;
     top:0px;
     left:0;
-    margin:0;
+    margin: 0px 15px 15px 0px ;
     grid-template-columns: 0.5fr 1fr;
     background-image: linear-gradient(45deg, #fa709a 0%, #fee140 70%, #d3fd4b80 100%);
 
