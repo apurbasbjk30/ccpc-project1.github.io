@@ -225,7 +225,7 @@ li {
     body {
       background-size: cover;
     }
-    
+
     .svg-container {
        display: block;
        z-index: 5;
@@ -320,4 +320,10 @@ li {
   
       margin: 0 10px; /* Adjust margin for smaller screens */
   }
+  #starfield
+  {
+    background-color: #000000;
+    height: 1000px !important;
+    max-width:932px !important;
+}
 }
