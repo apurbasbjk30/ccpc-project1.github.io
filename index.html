@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles/styles_index.css">
 </head>
 <body>
-    <div class="cont">
+    <div id="rotateMessage" class="rotate-message">Rotate your phone</div>
+    <div id="mainContent" class="cont">
     <!-- Navigation buttons -->
         <div class ="navbar "><!-- Fixed Navigation Bar all buttons on right side-->
             <div class ="navright">
@@ -205,5 +206,22 @@
     <script src="script/starfield.js"></script>
     <script src="script/script_index.js"></script>
     <script src="script/script.js"></script>
+    <script>
+        // JavaScript to handle the rotation detection
+        function checkOrientation() {
+          if (window.innerWidth < window.innerHeight) {
+            document.getElementById("rotateMessage").style.display = "flex";
+            document.getElementById("mainContent").classList.add("hidden");
+          } else {
+            document.getElementById("rotateMessage").style.display = "none";
+            document.getElementById("mainContent").classList.remove("hidden");
+          }
+        }
+        // Check orientation on load
+        window.addEventListener("load", checkOrientation);
+        // Check orientation on resize
+        window.addEventListener("resize", checkOrientation);
+        // Add other JavaScript functions as needed
+      </script>
 </body>
 </html>
