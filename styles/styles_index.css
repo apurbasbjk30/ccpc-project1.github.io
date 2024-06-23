@@ -380,7 +380,7 @@ h2{
 }
 .content2{
     margin: 0px 0px 15px 15px;
-    background-image: linear-gradient(to left, #999999 0%, #32564f80 100%);
+    background-image: linear-gradient(to right, #006da4 0%, #004d74 40%, #003554 60%);
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -427,7 +427,7 @@ h2{
   border-radius: 0 9px 0 0px; /* Rounded corners */
 }
 .right2{
-  background-image: linear-gradient(to right, #99999900 0%, #99999900 20% , #ffbdd1 100%);
+  background-image: linear-gradient(to right, #003554 0%, #022b42 20% , #032030 100%);
 }
 .event-box{
 background-color: #e297ae;
