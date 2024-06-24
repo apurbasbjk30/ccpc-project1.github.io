@@ -5,16 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <title>CcpC</title>
+    <title>CcpC-Projects</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styles_projects.css">
+    <link rel="icon" type="image/x-icon" href="img/CcpC.png">
     <style>
        
+#swiper h1{
+ margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  text-decoration-line: underline;
+  
+
+}
+#swiper {
+    top:200px;
+    left: calc(40%);
+  height: 50vh;
+
+  aspect-ratio: 3 / 4;
+  perspective: 10px;
+  perspective-origin: center 50%;
+  transform-style: preserve-3d;
+  position: absolute;
+  
+}
+
+.card {
+ 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: translateZ(calc(-10px * var(--i))) translateY(calc(10px * var(--i))) rotate(calc(-4deg * var(--i)));
+  filter: drop-shadow(3px 3px 20px rgba(11, 11, 11, 0.5));
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.5s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+
+@keyframes animation1 {
+
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation2 {
+
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
     </style>
 </head>
 <body>
-    <div class="cont">
-       
+
+    <div id="mainContent" class="cont">
         <!-- Navigation buttons -->
         <div class ="navbar "><!-- Fixed Navigation Bar all buttons on right side-->
             <div class="svg-container">
@@ -64,12 +131,181 @@
                     SoC@24
                 </div>
             </div>
+            <div class="SP24">
+                <h1 style="color:aliceblue"> Summer Project' 24</h1>
+            <div id="swiper" >
+                
+                </div>
+            </div>
         </div>
     </div>
     <canvas id="starfield"></canvas>
     <script src="script/script.js"></script>
     <script src="script/starfield.js"></script>
+    <script>
+        class Card {
+  constructor({
+    imageUrl,
+    onDismiss,
+    
+  }) {
+    this.imageUrl = imageUrl;
+    this.onDismiss = onDismiss
+    
+    this.#init();
+  }
 
+  // private properties
+  #startPoint;
+  #offsetX;
+  #offsetY;
+
+  #isTouchDevice = () => {
+    return (('ontouchstart' in window) ||
+      (navigator.maxTouchPoints > 0) ||
+      (navigator.msMaxTouchPoints > 0));
+  }
+
+  #init = () => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    const img = document.createElement('img');
+    img.src = this.imageUrl;
+    card.append(img);
+    this.element = card;
+    if (this.#isTouchDevice()) {
+      this.#listenToTouchEvents();
+    } else {
+      this.#listenToMouseEvents();
+    }
+  }
+
+  #listenToTouchEvents = () => {
+    this.element.addEventListener('touchstart', (e) => {
+      const touch = e.changedTouches[0];
+      if (!touch) return;
+      const { clientX, clientY } = touch;
+      this.#startPoint = { x: clientX, y: clientY }
+      document.addEventListener('touchmove', this.#handleTouchMove);
+      this.element.style.transition = 'transform 0s';
+    });
+
+    document.addEventListener('touchend', this.#handleTouchEnd);
+    document.addEventListener('cancel', this.#handleTouchEnd);
+  }
+
+  #listenToMouseEvents = () => {
+    this.element.addEventListener('mousedown', (e) => {
+      const { clientX, clientY } = e;
+      this.#startPoint = { x: clientX, y: clientY }
+      document.addEventListener('mousemove', this.#handleMouseMove);
+      this.element.style.transition = 'transform 0s';
+    });
+
+    document.addEventListener('mouseup', this.#handleMoveUp);
+
+    // prevent card from being dragged
+    this.element.addEventListener('dragstart', (e) => {
+      e.preventDefault();
+    });
+  }
+
+  #handleMove = (x, y) => {
+    this.#offsetX = x - this.#startPoint.x;
+    this.#offsetY = y - this.#startPoint.y;
+    const rotate = this.#offsetX * 0.1;
+    this.element.style.transform = `translate(${this.#offsetX}px, ${this.#offsetY}px) rotate(${rotate}deg)`;
+    // dismiss card
+    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.7) {
+      this.#dismiss(this.#offsetX > 0 ? 1 : -1);
+    }
+  }
+
+  // mouse event handlers
+  #handleMouseMove = (e) => {
+    e.preventDefault();
+    if (!this.#startPoint) return;
+    const { clientX, clientY } = e;
+    this.#handleMove(clientX, clientY);
+  }
+
+  #handleMoveUp = () => {
+    this.#startPoint = null;
+    document.removeEventListener('mousemove', this.#handleMouseMove);
+    this.element.style.transform = '';
+  }
+
+  // touch event handlers
+  #handleTouchMove = (e) => {
+    if (!this.#startPoint) return;
+    const touch = e.changedTouches[0];
+    if (!touch) return;
+    const { clientX, clientY } = touch;
+    this.#handleMove(clientX, clientY);
+  }
+
+  #handleTouchEnd = () => {
+    this.#startPoint = null;
+    document.removeEventListener('touchmove', this.#handleTouchMove);
+    this.element.style.transform = '';
+  }
+
+  #dismiss = (direction) => {
+    this.#startPoint = null;
+    document.removeEventListener('mouseup', this.#handleMoveUp);
+    document.removeEventListener('mousemove', this.#handleMouseMove);
+    document.removeEventListener('touchend', this.#handleTouchEnd);
+    document.removeEventListener('touchmove', this.#handleTouchMove);
+    this.element.style.transition = 'transform 1s';
+    this.element.style.transform = `translate(${direction * window.innerWidth}px, ${this.#offsetY}px) rotate(${90 * direction}deg)`;
+    this.element.classList.add('dismissing');
+    setTimeout(() => {
+      this.element.remove();
+    }, 1000);
+    if (typeof this.onDismiss === 'function') {
+      this.onDismiss();
+    }
+    
+  }
+}
+
+// DOM
+const swiper = document.querySelector('#swiper');
+
+
+// constants
+const urls = [
+  'images/1.jfif',
+  'images/2.jfif',
+  'images/3.jfif',
+  'images/4.jfif',
+];
+
+// variables
+let cardCount = 0;
+
+// functions
+function appendNewCard() {
+  const card = new Card({
+    imageUrl: urls[cardCount % 4],
+    onDismiss: appendNewCard,
+   
+  });
+  swiper.append(card.element);
+  cardCount++;
+
+  const cards = swiper.querySelectorAll('.card:not(.dismissing)');
+  cards.forEach((card, index) => {
+    card.style.setProperty('--i', index);
+  });
+}
+
+
+for (let i = 0; i <= 4; i++) {
+  appendNewCard();
+}
+
+    </script>
 </body>
 </html>
 
