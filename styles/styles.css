@@ -324,27 +324,11 @@ li {
   {
     background-color: #000000;
     height: 1000px !important;
-    max-width:932px !important;
+   
+}
+canvas {
+    max-width: 100%;
+    height: auto;
 }
 }
-  /* Styling for "Rotate your phone" message */
-  .rotate-message {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    text-align: center;
-    z-index: 1000;
-  }
-  /* Hide the main content when in portrait mode */
-  .hidden {
-    display: none;
-  }
+
