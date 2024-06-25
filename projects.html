@@ -5,83 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <title>CcpC-Projects</title>
+    <title>CcpC</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/styles_projects.css">
-    <link rel="icon" type="image/x-icon" href="img/CcpC.png">
     <style>
        
-#swiper h1{
- margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  text-decoration-line: underline;
-  
-
-}
-#swiper {
-    top:200px;
-    left: calc(40%);
-  height: 50vh;
-
-  aspect-ratio: 3 / 4;
-  perspective: 10px;
-  perspective-origin: center 50%;
-  transform-style: preserve-3d;
-  position: absolute;
-  
-}
-
-.card {
- 
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 20px;
-  overflow: hidden;
-  transform: translateZ(calc(-10px * var(--i))) translateY(calc(10px * var(--i))) rotate(calc(-4deg * var(--i)));
-  filter: drop-shadow(3px 3px 20px rgba(11, 11, 11, 0.5));
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.5s;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-
-
-@keyframes animation1 {
-
-  0%,
-  100% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes animation2 {
-
-  0%,
-  100% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
+        .cards-container {
+            position: absolute;
+            width: 800px; /* Adjust as needed */
+            height: 400px; /* Adjust as needed */
+            margin: 10% 20%;
+            display: none; /* Initially hidden */
+        }
+        .card {
+            position: absolute;
+            height: 250px;
+            width: 200px;
+            border-radius: 25px;
+            perspective: 1000px; /* Container needed to show 3D transforms */
+            z-index: 1; /* Default z-index */
+            transition: z-index 0.6s; /* Smooth transition for z-index change */
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card:hover {
+            z-index: 10; /* Bring to front on hover */
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg) translateY(-75px); /* Flip and lift on hover */
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adding shadow */
+        }
+        .card-front {
+            background-color: rgb(248, 248, 248);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+        .card-back {
+            background-color: rgb(200, 200, 200);
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+            color: black;
+            font-size: 18px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-
-    <div id="mainContent" class="cont">
+    <div class="cont">
+       
         <!-- Navigation buttons -->
         <div class ="navbar "><!-- Fixed Navigation Bar all buttons on right side-->
             <div class="svg-container">
@@ -124,188 +124,92 @@
         
         <div class="content">
             <div class="title-box add-flex">
-                <div class="title add-flex" onclick="toggleSp24()">
+                <div class="title add-flex" onclick="showCards('container1')">
                     SP@24
                 </div>
-                <div class="title add-flex" onclick="toggleSoC24()">
+                <div class="title add-flex" onclick="showCards('container2')">
                     SoC@24
                 </div>
             </div>
-            <div class="SP24">
-                <h1 style="color:aliceblue"> Summer Project' 24</h1>
-            <div id="swiper" >
-                
-                </div>
-            </div>
+            <div class="cards-container" id="container1"></div>
+            <div class="cards-container" id="container2"></div>
         </div>
     </div>
     <canvas id="starfield"></canvas>
     <script src="script/script.js"></script>
     <script src="script/starfield.js"></script>
     <script>
-        class Card {
-  constructor({
-    imageUrl,
-    onDismiss,
-    
-  }) {
-    this.imageUrl = imageUrl;
-    this.onDismiss = onDismiss
-    
-    this.#init();
-  }
+        const cardsData1 = [
+            { id: 1, top: 0, left: 0, img: 'https://via.placeholder.com/150', text: 'Card 1 Text' },
+            { id: 2, top: 50, left: 100, img: 'https://via.placeholder.com/150', text: 'Card 2 Text' },
+            { id: 3, top: 100, left: 200, img: 'https://via.placeholder.com/150', text: 'Card 3 Text' },
+            { id: 4, top: 150, left: 300, img: 'https://via.placeholder.com/150', text: 'Card 4 Text' },
+            { id: 5, top: 200, left: 400, img: 'https://via.placeholder.com/150', text: 'Card 5 Text' },
+            { id: 6, top: 250, left: 500, img: 'https://via.placeholder.com/150', text: 'Card 6 Text' }
+        ];
 
-  // private properties
-  #startPoint;
-  #offsetX;
-  #offsetY;
+        const cardsData2 = [
+            { id: 1, top: 0, left: 0, img: 'https://via.placeholder.com/150', text: 'Card A Text' },
+            { id: 2, top: 50, left: 100, img: 'https://via.placeholder.com/150', text: 'Card B Text' },
+            { id: 3, top: 100, left: 200, img: 'https://via.placeholder.com/150', text: 'Card C Text' },
+            { id: 4, top: 150, left: 300, img: 'https://via.placeholder.com/150', text: 'Card D Text' },
+            { id: 5, top: 200, left: 400, img: 'https://via.placeholder.com/150', text: 'Card E Text' },
+            { id: 6, top: 250, left: 500, img: 'https://via.placeholder.com/150', text: 'Card F Text' }
+        ];
 
-  #isTouchDevice = () => {
-    return (('ontouchstart' in window) ||
-      (navigator.maxTouchPoints > 0) ||
-      (navigator.msMaxTouchPoints > 0));
-  }
+        function createCards(containerId, cardsData) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = ''; // Clear existing cards
 
-  #init = () => {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    const img = document.createElement('img');
-    img.src = this.imageUrl;
-    card.append(img);
-    this.element = card;
-    if (this.#isTouchDevice()) {
-      this.#listenToTouchEvents();
-    } else {
-      this.#listenToMouseEvents();
-    }
-  }
+            cardsData.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card');
+                cardElement.style.top = `${card.top}px`;
+                cardElement.style.left = `${card.left}px`;
 
-  #listenToTouchEvents = () => {
-    this.element.addEventListener('touchstart', (e) => {
-      const touch = e.changedTouches[0];
-      if (!touch) return;
-      const { clientX, clientY } = touch;
-      this.#startPoint = { x: clientX, y: clientY }
-      document.addEventListener('touchmove', this.#handleTouchMove);
-      this.element.style.transition = 'transform 0s';
-    });
+                const cardInner = document.createElement('div');
+                cardInner.classList.add('card-inner');
 
-    document.addEventListener('touchend', this.#handleTouchEnd);
-    document.addEventListener('cancel', this.#handleTouchEnd);
-  }
+                const cardFront = document.createElement('div');
+                cardFront.classList.add('card-front');
 
-  #listenToMouseEvents = () => {
-    this.element.addEventListener('mousedown', (e) => {
-      const { clientX, clientY } = e;
-      this.#startPoint = { x: clientX, y: clientY }
-      document.addEventListener('mousemove', this.#handleMouseMove);
-      this.element.style.transition = 'transform 0s';
-    });
+                const imgElement = document.createElement('img');
+                imgElement.src = card.img;
+                cardFront.appendChild(imgElement);
 
-    document.addEventListener('mouseup', this.#handleMoveUp);
+                const cardBack = document.createElement('div');
+                cardBack.classList.add('card-back');
+                cardBack.textContent = card.text;
 
-    // prevent card from being dragged
-    this.element.addEventListener('dragstart', (e) => {
-      e.preventDefault();
-    });
-  }
+                cardInner.appendChild(cardFront);
+                cardInner.appendChild(cardBack);
+                cardElement.appendChild(cardInner);
+                container.appendChild(cardElement);
+            });
+        }
 
-  #handleMove = (x, y) => {
-    this.#offsetX = x - this.#startPoint.x;
-    this.#offsetY = y - this.#startPoint.y;
-    const rotate = this.#offsetX * 0.1;
-    this.element.style.transform = `translate(${this.#offsetX}px, ${this.#offsetY}px) rotate(${rotate}deg)`;
-    // dismiss card
-    if (Math.abs(this.#offsetX) > this.element.clientWidth * 0.7) {
-      this.#dismiss(this.#offsetX > 0 ? 1 : -1);
-    }
-  }
+        function showCards(containerId) {
+            // Hide all containers
+            const containers = document.querySelectorAll('.cards-container');
+            containers.forEach(container => {
+                container.style.display = 'none';
+            });
 
-  // mouse event handlers
-  #handleMouseMove = (e) => {
-    e.preventDefault();
-    if (!this.#startPoint) return;
-    const { clientX, clientY } = e;
-    this.#handleMove(clientX, clientY);
-  }
+            // Display the selected container and create cards
+            const selectedContainer = document.getElementById(containerId);
+            selectedContainer.style.display = 'block';
 
-  #handleMoveUp = () => {
-    this.#startPoint = null;
-    document.removeEventListener('mousemove', this.#handleMouseMove);
-    this.element.style.transform = '';
-  }
+            if (containerId === 'container1') {
+                createCards(containerId, cardsData1);
+            } else if (containerId === 'container2') {
+                createCards(containerId, cardsData2);
+            }
+        }
 
-  // touch event handlers
-  #handleTouchMove = (e) => {
-    if (!this.#startPoint) return;
-    const touch = e.changedTouches[0];
-    if (!touch) return;
-    const { clientX, clientY } = touch;
-    this.#handleMove(clientX, clientY);
-  }
-
-  #handleTouchEnd = () => {
-    this.#startPoint = null;
-    document.removeEventListener('touchmove', this.#handleTouchMove);
-    this.element.style.transform = '';
-  }
-
-  #dismiss = (direction) => {
-    this.#startPoint = null;
-    document.removeEventListener('mouseup', this.#handleMoveUp);
-    document.removeEventListener('mousemove', this.#handleMouseMove);
-    document.removeEventListener('touchend', this.#handleTouchEnd);
-    document.removeEventListener('touchmove', this.#handleTouchMove);
-    this.element.style.transition = 'transform 1s';
-    this.element.style.transform = `translate(${direction * window.innerWidth}px, ${this.#offsetY}px) rotate(${90 * direction}deg)`;
-    this.element.classList.add('dismissing');
-    setTimeout(() => {
-      this.element.remove();
-    }, 1000);
-    if (typeof this.onDismiss === 'function') {
-      this.onDismiss();
-    }
-    
-  }
-}
-
-// DOM
-const swiper = document.querySelector('#swiper');
-
-
-// constants
-const urls = [
-  'images/1.jfif',
-  'images/2.jfif',
-  'images/3.jfif',
-  'images/4.jfif',
-];
-
-// variables
-let cardCount = 0;
-
-// functions
-function appendNewCard() {
-  const card = new Card({
-    imageUrl: urls[cardCount % 4],
-    onDismiss: appendNewCard,
-   
-  });
-  swiper.append(card.element);
-  cardCount++;
-
-  const cards = swiper.querySelectorAll('.card:not(.dismissing)');
-  cards.forEach((card, index) => {
-    card.style.setProperty('--i', index);
-  });
-}
-
-
-for (let i = 0; i <= 4; i++) {
-  appendNewCard();
-}
-
+        // Show the first set of cards by default
+        showCards('container1');
     </script>
+
 </body>
 </html>
 
