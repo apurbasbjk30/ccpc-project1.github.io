@@ -330,5 +330,12 @@ canvas {
     max-width: 100%;
     height: auto;
 }
+.cards-container {
+    position: absolute;
+    width: 800px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    margin:20% 5% !important;
+    display: none; /* Initially hidden */
+}
 }
 
