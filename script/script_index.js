@@ -141,6 +141,7 @@ Member profiles loaded successfully!\n
 const studentDetails = {
     Sandeep: { name: "Sandeep", role: "Executive", linkedin: "https://www.linkedin.com/in/sandeep-mahato-a31b4a256/", github: "https://github.com/sandeepmahato1" },
     Om: { name: "Om Vishesh", role: "Executive", linkedin: "https://www.linkedin.com/in/om", github: "https://github.com/om" },
+    Apurba: { name: "Apurba Das", role: "Executive", linkedin: "#", github: "#" },
     Reyaz: { name: "Md. Reyaz Haider", role: "Executive", linkedin: "#", github: "#" },
     AdityaSC: { name: "Aditya SC", role: "Executive", linkedin: "https://www.linkedin.com/in/adityasc2004/", github: "https://github.com/adityasc2004" },
     Priyanshu: { name: "Priyanshu", role: "Executive", linkedin: "https://www.linkedin.com/in/priyanshuverma17/", github: "https://github.com/PriyanshuV17" },
