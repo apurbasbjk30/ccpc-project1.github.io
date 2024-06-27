@@ -486,7 +486,7 @@ margin: 5px;
 .content4{
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-image: linear-gradient(to right,#f0ede5 0%, #ffbdd1 100%);
+  background-image: linear-gradient(to top,#f0ede5 0%, #ffbdd1 100%);
   margin:15px 0px 15px 15px ;
 }
 .left4{
@@ -877,9 +877,9 @@ h2{
 }
 .content2{
   margin: 0px 0px 15px 15px;
-  background-image: linear-gradient(to left, #999999 0%, #32564f80 100%);
+  background-image: linear-gradient(to right,#fdae7a 0%, #efbf38 20%, #e08600 50%);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
 }
 #slideshow-container {
   position: relative;
@@ -953,7 +953,7 @@ margin: 2px;
 .content4 {
   display: flex;
   grid-template-columns: 1fr;
-  background-image: linear-gradient(to right, #999999 0%, #999999 20%, #ffbdd1 100%);
+  background-image: linear-gradient(to top, #999999 0%, #999999 20%, #ffbdd1 100%);
   margin: 15px 0px 15px 15px;
   flex-direction: column-reverse;
 }
