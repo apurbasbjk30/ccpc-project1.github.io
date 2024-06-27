@@ -9,10 +9,6 @@ ul p{
     margin: 0;
     color: whitesmoke;
 }
-p{
-    color: #0277bd;
-}
-
 .svg-container {
     position:absolute;
     top:10px;
@@ -330,18 +326,6 @@ canvas {
     max-width: 100%;
     height: auto;
 }
-.cards-container {
-    position: absolute;
-    width: 800px; /* Adjust as needed */
-    height: 300px; /* Adjust as needed */
-    margin:20% 5% !important;
-    display: none; /* Initially hidden */
 }
-.card {
-    position: absolute;
-    height: 200px !important;
-    width: 150px !important;
-   
-}
-}
+
 
