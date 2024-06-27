@@ -1,13 +1,26 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-image: linear-gradient(-225deg, #ffe7a5 0%, #b7a764 48%, #927c00 100%);
+  font-family: cursive, sans-serif;
+  background-image: linear-gradient(-225deg, #d1ae90 0%, #d7a072 38%, #d7a072 68%, #d8853f 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+p{
+ font-size: 18px;
+}
+#title{
+  font-family: cursive, sans-serif;
+  margin: 5px;
+  font-size: 60px;
+  font-weight: lighter;
+}
+h4{
+  font-family: cursive, sans-serif;
+  margin: 0px;
+  font-size: 20px;
+}
 .blog-content{
 display: flex;
 flex-direction: column;
@@ -32,7 +45,8 @@ grid-template-columns: 1fr 4fr 1fr;
 }
 
 .article {
-  background-color: rgba(0, 0, 0, 0.384);
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgba(0, 0, 0, 0.304);
   color: #d4d4d4f5;
   padding: 10px;
   transition: background-color 0.5s, color 0.5s;
@@ -46,7 +60,10 @@ grid-template-columns: 1fr 4fr 1fr;
 }
 
 .date {
-  color: rgb(176, 26, 26);
+  color: rgb(95, 6, 6);
+}
+.article.clicked .date {
+  color: rgb(239, 239, 239);
 }
 
 .name {
