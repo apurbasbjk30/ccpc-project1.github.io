@@ -32,8 +32,8 @@ a {
 
 .card {
 	position: relative;
-	width: 350px;
-	height: 350px;
+	width: 200px;
+	height: 200px;
 }
 
 .face {
@@ -69,7 +69,10 @@ a {
 	text-align: center;
 	
 }
-
+.text-h2{
+	position: relative;
+	font-size: small;
+}
 .card .back {
 	display: flex;
 	flex-direction: column;
