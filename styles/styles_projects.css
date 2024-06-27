@@ -115,6 +115,27 @@ button {
     padding: 10px 20px;
     font-size: 16px;
 }
+.card .text {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .text i {
+    margin-top: 10px;
+    color: #000;
+}
+.fa-github {
+   font-size: 30px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.fa-github:hover {
+    transform: scale(1.2); /* Example: increase size on hover */
+    filter: invert(1); /* Invert colors: black becomes white and vice versa */
+}
+
 @media (max-width:932px) {
 .cards-container {
     position: absolute;
