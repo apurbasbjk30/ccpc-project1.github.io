@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CcpC-Events</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://unpkg.com/vanta/dist/vanta.clouds.min.js"></script>  
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="styles/event_style.css" rel="stylesheet">
 	<link href="styles/styles.css" rel="stylesheet">
@@ -51,109 +53,54 @@
 			</div>
 		</div>
 
+<div class="middlebody">
+	
+		<div class="wrapper">
 
-
-    <div class="wrapper">
-
-		<div class="card">
-
-			<div class="face front">
-				<img src="img/Gavin Nelson.jfif">
-				<h2 class="text-h2">Event 1</h2>
-			</div>
 			<div class="card">
+	
+				<div class="face front">
+					<img src="img/Gavin Nelson.jfif">
+					<h1 class="text-h1">Event 1</h1>
+				</div>
+	
+				<div class="face back">
+					<h2 class="text-h2">GitHub basics and Collaborative coding</h2>
+					<p class="text-p">
+						
+					</p>
+					<div class="links">
+						<a class="link-a" href="blogs.html#010324">Details</a>
+					</div>
+				</div>
+			</div>
+	
+			<div class="card">
+	
 				<div class="face front">
 					<img src="img/UI Design 3D Illustration.jfif ">
 					<h1 class="text-h1">Event 2</h1>
 				</div>
+	
 				<div class="face back">
-					
+					<h2 class="text-h2">Computer Graphics & Future Outlook</h2>
 					<p class="text-p">
-						<h3>Computer Graphics & Future Outlook</h3>
+						
 					</p>
 					<div class="links">
 						<a class="link-a" href="blogs.html">Details</a>
 					</div>
 				</div>
+	
 			</div>
+	
+			
 		</div>
-
-		<div class="card">
-
-			<div class="face front">
-				<img src="img/UI Design 3D Illustration.jfif ">
-				<h2 class="text-h2">Event 2</h2>
-			</div>
-
-			<div class="face back">
-				
-				<p class="text-p">
-					<h3>Computer Graphics & Future Outlook</h3>
-				</p>
-				<div class="links">
-					<a class="link-a" href="blogs.html">Details</a>
-				</div>
-			</div>
-
-		</div>
-		<div class="card">
-
-			<div class="face front">
-				<img src="img/UI Design 3D Illustration.jfif ">
-				<h2 class="text-h2">Event 2</h2>
-			</div>
-
-			<div class="face back">
-				
-				<p class="text-p">
-					<h3>Computer Graphics & Future Outlook</h3>
-				</p>
-				<div class="links">
-					<a class="link-a" href="blogs.html">Details</a>
-				</div>
-			</div>
-
-		</div><div class="card">
-
-			<div class="face front">
-				<img src="img/UI Design 3D Illustration.jfif ">
-				<h2 class="text-h2">Event 2</h2>
-			</div>
-
-			<div class="face back">
-				
-				<p class="text-p">
-					<h3>Computer Graphics & Future Outlook</h3>
-				</p>
-				<div class="links">
-					<a class="link-a" href="blogs.html">Details</a>
-				</div>
-			</div>
-
-		</div><div class="card">
-
-			<div class="face front">
-				<img src="img/UI Design 3D Illustration.jfif ">
-				<h2 class="text-h2">Event 2</h2>
-			</div>
-
-			<div class="face back">
-				
-				<p class="text-p">
-					<h3>Computer Graphics & Future Outlook</h3>
-				</p>
-				<div class="links">
-					<a class="link-a" href="blogs.html">Details</a>
-				</div>
-			</div>
-
-		</div>
-
 		
 	</div>
-
-    <footer>
-            
+  <<footer>
+	<div id="vanta-footer" style="width: 100%; height: 200px;">
+		<div class="contact">
 		<div class="social-connection"><!--Section for social media connect as column grid-->
 			<a href="https://www.linkedin.com/company/codecraftercuj/" target="_blank" class="social-link linkedin">
 				<i class="fab fa-linkedin"></i>
@@ -176,10 +123,10 @@
 		<div class="credit">
 		Design & Developed by <a href="https://www.linkedin.com/in/krish-kumar-82a21b256" target="_blank"> &nbsp;&nbsp;Krish Kumar</a>&nbsp;&nbsp;& &nbsp;&nbsp;<a href="https://github.com/apurbasbjk30" target="_blank"> Apurba Das</a>
 	</div>
-		</div>
-	
-	
-	</footer>
+	</div>
+</div>
+</footer>
+
 		
 </div>
 
@@ -187,5 +134,20 @@
     
 
 	<script src="script/script.js"></script>
+	<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            VANTA.CLOUDS({
+                el: "#vanta-footer",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                backgroundColor: 0x0,
+                skyColor: 0x986545,
+                speed: 0.80
+            })
+        });
+        </script>
 </body>
 </html>
