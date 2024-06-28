@@ -10,7 +10,9 @@
     <link rel="icon" type="image/x-icon" href="img/CcpC.png">
 </head>
 <body>
+    <canvas id="starfield"></canvas>
     <div id="mainContent" class="cont">
+        <div class="content">
         <!-- Navigation buttons -->
         <div class ="navbar "><!-- Fixed Navigation Bar all buttons on right side-->
             <div class="svg-container">
@@ -51,7 +53,7 @@
             </div>
         </div>
         <!-- Top Body -->
-        
+
         <div class="list">
                 <div class="c1">
                     <button id="membersButton" class="transparent-button"><h1>Members</h1></button>
@@ -73,15 +75,23 @@
                             <li>Click on <b>Alumni</b> to view Past Members of the Club</li>
                         </ul>
                     </p>
+                    <div class="register">
+                        <p><h4 id="invite">Join us!</h4> Do <span class="transparent-button" id="register" onclick="window.location.href='https://forms.gle/N3TuwdNUZWwKTbAu6'">Registration</span> to become a member of the Club.
+                        </p>
+                    </div>
                 </div>
+                
             </div>
             <!-- Members Content -->
             <div id="membersContent" class="members-list"></div>
             <!-- Alumni Content -->
             <div id="alumniContent" class="members-list"></div>
         </div>
-        <canvas id="starfield"></canvas>
+        </div>
     </div>
+    <script>
+        
+    </script>
     <script src="script/starfield.js"></script>
     <script src="script/script.js"></script>
     <script src="script/script_member.js"></script>

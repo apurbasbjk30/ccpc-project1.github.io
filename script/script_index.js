@@ -36,7 +36,7 @@ window.addEventListener('scroll', function() {
       svgContainer.style.height = '26px';
       navButtons.style.display = 'flex';
       //outputDiv.style.display = 'none';
-      wordDiv.style.fontSize = '14px';
+      wordDiv.style.fontSize = '12px';
       
   }
 
