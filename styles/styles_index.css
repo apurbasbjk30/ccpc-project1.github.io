@@ -1108,7 +1108,7 @@ margin: 2px;
 /* footer*/
 .contact{
   position: relative;
-top:20px;
+top:40px;
 }
 .social-connection {
     display: flex;
@@ -1141,7 +1141,7 @@ color: #bc2a8d; /* Change to Instagram color on hover */
 
 /* Style for GitHub icon */
 .github:hover {
-color: #000000; /* Change to GitHub color on hover */
+color: #686868; /* Change to GitHub color on hover */
 }
 .social-connection img {
   width: 10px;
@@ -1183,5 +1183,6 @@ color: #000000; /* Change to GitHub color on hover */
 }
 .credit a {
   text-decoration: none;
-  color: #1b49a0;
+  color: #070707;
+  mix-blend-mode: difference;
 }
