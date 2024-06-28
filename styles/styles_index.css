@@ -1106,17 +1106,13 @@ margin: 2px;
 
 
 /* footer*/
-footer {
-  padding: 15px;
- 
-  color: rgb(255, 255, 255);
-  
+.contact{
+  position: relative;
+top:20px;
 }
-
 .social-connection {
     display: flex;
     justify-content: center;
-    
 }
 
 .social-link {
@@ -1187,26 +1183,5 @@ color: #000000; /* Change to GitHub color on hover */
 }
 .credit a {
   text-decoration: none;
-  color: #9c9191;
-}
-#output {
-  display: flex;
-  justify-content: center;
-  font-family: monospace;
-  font-weight: normal;
-  font-size: 20px;
-  text-align: left; /* Align the text to the left */
-}
-
-#word {
-  color: rgb(255, 255, 255); /* Change the color here */
-}
-
-.blink {
-  animation: blink-animation 0.2s infinite;
-}
-
-@keyframes blink-animation {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+  color: #1b49a0;
 }
