@@ -75,6 +75,105 @@ grid-template-columns: 1fr 4fr 1fr;
 @media (max-width:932px) {
   .middlebody{
     display: grid;
-    grid-template-columns: 0.25fr 3.5fr 0.25fr;
+    grid-template-columns: 1fr 3.5fr 0.25fr ;
     }
+}
+
+/* footer*/
+footer {
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  
+}
+
+.social-connection {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+.social-link {
+    display: inline-block;
+    width: 50px;
+  height: 50px;
+    margin: 0 10px;
+    color: #d2edfc; /* You can style the color of the icons here */
+    font-size: 24px; /* Adjust the size of the icons as needed */
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+
+    transform: scale(1.5);
+}
+/* Style for LinkedIn icon */
+.linkedin:hover {
+color: #0077b5; /* Change to LinkedIn color on hover */
+}
+
+/* Style for Instagram icon */
+.instagram:hover {
+color: #bc2a8d; /* Change to Instagram color on hover */
+}
+
+/* Style for GitHub icon */
+.github:hover {
+color: #000000; /* Change to GitHub color on hover */
+}
+.social-connection img {
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  
+}
+.DCSE  a {
+  color: white; /* Default color for the link */
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  justify-content: center;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: antiquewhite;
+  margin-top: 10px;
+  padding-right: 5px;
+}
+.copyright p {
+  justify-content: center;
+  font-size: 12px; /* Adjust the font size as needed */
+}
+.credit {
+  color: white;
+  display:flex;
+  justify-content: center;
+  text-decoration: none;
+ 
+}
+.credit a {
+  text-decoration: none;
+  color: #9c9191;
+}
+#output {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: left; /* Align the text to the left */
+}
+
+#word {
+  color: rgb(255, 255, 255); /* Change the color here */
+}
+
+.blink {
+  animation: blink-animation 0.2s infinite;
+}
+
+@keyframes blink-animation {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
