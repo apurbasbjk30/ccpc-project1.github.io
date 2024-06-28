@@ -104,3 +104,107 @@ footer {
 }
 
 }
+.contact{ 
+  position: relative;
+  top:20px;
+  }
+  .social-connection {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .social-link {
+    display: inline-block;
+    width: 50px;
+    height: 40px !important;
+    margin: 0 10px !important;
+    color: #700909 /* You can style the color of the icons here */ !important;
+    font-size: 30px !important; /* Adjust the size of the icons as needed */
+    transition: transform 0.3s ease;
+    font-weight: 400px !important;
+  }
+  
+  .social-link:hover {
+  
+    transform: scale(1.5);
+  }
+  /* Style for LinkedIn icon */
+  .linkedin:hover {
+  color: #0077b5; /* Change to LinkedIn color on hover */
+  }
+  
+  /* Style for Instagram icon */
+  .instagram:hover {
+  color: #bc2a8d; /* Change to Instagram color on hover */
+  }
+  
+  /* Style for GitHub icon */
+  .github:hover {
+  color: #686868; /* Change to GitHub color on hover */
+  }
+  .social-connection img {
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  
+  }
+  
+  .University {
+  display: flex;
+  justify-content: center;
+  }
+  
+  
+  .University img {
+  /* width: 100px; */
+  height: 40px;
+  }
+  
+  .University p {
+  margin-left: 10px;
+  }
+  
+  .University a {
+  color: rgb(24, 21, 21) !important;
+  text-decoration: none;
+  }
+  
+  .University a:hover {
+  color: yellow;
+  }
+  
+  
+  .DCSE  a {
+  color: rgb(0, 0, 0) !important; /* Default color for the link */
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  font-size: 15px;
+  font-weight:300;
+  justify-content: center;
+  }
+  .copyright {
+  display: flex;
+  justify-content: center;
+  color: rgb(41, 40, 40);
+  margin-top: 5px !important;
+  padding-right: 5px;
+  }
+  .copyright p {
+  justify-content: center;
+  font-size: 12px; /* Adjust the font size as needed */
+  }
+  .credit {
+  color: rgb(16, 15, 15);
+  display:flex;
+  justify-content: center;
+  text-decoration: none;
+   
+  }
+  .credit a {
+  text-decoration: none;
+  color: #4e4b4b !important;
+  mix-blend-mode: difference;
+  }
+
+

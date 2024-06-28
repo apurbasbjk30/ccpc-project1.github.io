@@ -1106,6 +1106,7 @@ margin: 2px;
 
 
 /* footer*/
+
 .contact{
   position: relative;
 top:40px;
@@ -1120,9 +1121,10 @@ top:40px;
     width: 50px;
   height: 50px;
     margin: 0 10px;
-    color: #d2edfc; /* You can style the color of the icons here */
-    font-size: 24px; /* Adjust the size of the icons as needed */
+    color: #000000; /* You can style the color of the icons here */
+    font-size: 30px; /* Adjust the size of the icons as needed */
     transition: transform 0.3s ease;
+    font-weight: 400px;
 }
 
 .social-link:hover {
@@ -1156,17 +1158,37 @@ color: #686868; /* Change to GitHub color on hover */
 }
 
 
+.University img {
+  /* width: 100px; */
+  height: 40px;
+}
+
+.University p {
+  margin-left: 10px;
+}
+
+.University a {
+  color: rgb(24, 21, 21);
+  text-decoration: none;
+}
+
+.University a:hover {
+  color: yellow;
+}
+
 
 .DCSE  a {
-  color: white; /* Default color for the link */
+  color: rgb(0, 0, 0); /* Default color for the link */
   text-decoration: none; /* Remove underline */
   display: flex;
+  font-size: 15px;
+  font-weight:300;
   justify-content: center;
 }
 .copyright {
   display: flex;
   justify-content: center;
-  color: antiquewhite;
+  color: rgb(41, 40, 40);
   margin-top: 10px;
   padding-right: 5px;
 }
@@ -1175,7 +1197,7 @@ color: #686868; /* Change to GitHub color on hover */
   font-size: 12px; /* Adjust the font size as needed */
 }
 .credit {
-  color: white;
+  color: rgb(16, 15, 15);
   display:flex;
   justify-content: center;
   text-decoration: none;
