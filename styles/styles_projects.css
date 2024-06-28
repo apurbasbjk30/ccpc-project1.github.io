@@ -150,6 +150,9 @@ button {
     width: 150px !important;
    
 }
+.cont{
+    height: 80vh;
+}
 footer{
     margin-top: 100%;
   }
