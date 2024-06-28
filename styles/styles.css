@@ -297,7 +297,7 @@ justify-content: center;
 font-size: 12px; /* Adjust the font size as needed */
 }
 .credit {
-color: rgb(255, 253, 253);
+color: rgb(0, 0, 0);
 display:flex;
 justify-content: center;
 text-decoration: none;
