@@ -25,6 +25,8 @@ ul p{
 #word {
     color: rgb(255, 255, 255); 
     font-size: 12px;
+    font-family: cursive, sans-serif;
+
     /* Change the color here */
   }
   
