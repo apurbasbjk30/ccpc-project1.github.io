@@ -6,10 +6,17 @@
 	padding: 0;
 }
 
-html,
-body {
-	background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-}
+body, html {
+	margin: 0;
+	padding: 0;
+	font-family: cursive, sans-serif;
+	background-image: linear-gradient(to top, #986545 0%, #92b6d7 100%);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+  
+  }
+  
 ul,
 li {
 	list-style: none;
@@ -18,13 +25,20 @@ li {
 a {
 	text-decoration: none;
 }
-
+.middlebody{
+display: flex;
+height: 70vh;
+width: 100%;
+justify-content: center;
+}
 .wrapper {
 	
 	display: grid;
 	column-gap: 40px;
+	margin-top:100px;
+	margin-left:10%;
 	row-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
 	align-items: center;
 	justify-content: space-evenly;
 	
@@ -122,86 +136,3 @@ a {
 
 	/* footer*/
 
-footer {
-		margin-top: 100px;
-		margin-bottom: 0px;
-		padding: 40px;
-		color: rgb(255, 255, 255);
-		background-color: #000000;
-		
-	  }
-  .social-connection {
-	margin-top: 50px;
-	  display: flex;
-	  justify-content: center;
-	  
-  }
-  
-  .social-link {
-	  display: inline-block;
-	  width: 50px;
-	height: 50px;
-	  margin: 10px 10px;
-	  color: #d2edfc; /* You can style the color of the icons here */
-	  font-size: 24px; /* Adjust the size of the icons as needed */
-	  transition: transform 0.3s ease;
-  }
-  
-  .social-link:hover {
-  
-	  transform: scale(1.5);
-  }
-  /* Style for LinkedIn icon */
-  .linkedin:hover {
-  color: #0077b5; /* Change to LinkedIn color on hover */
-  }
-  
-  /* Style for Instagram icon */
-  .instagram:hover {
-  color: #bc2a8d; /* Change to Instagram color on hover */
-  }
-  
-  /* Style for GitHub icon */
-  .github:hover {
-  color: #000000; /* Change to GitHub color on hover */
-  }
-  .social-connection img {
-	width: 10px;
-	height: 10px;
-	margin: 10px;
-	
-  }
-  
-
-  
-  
-  .DCSE  a {
-	color: rgb(255, 255, 255); /* Default color for the link */
-	text-decoration: none; /* Remove underline */
-	display: flex;
-	justify-content: center;
-  }
-  .copyright {
-	display: flex;
-	justify-content: center;
-	color: rgb(109, 97, 82);
-	margin-top: 10px;
-	padding-right: 5px;
-  }
-  .copyright p {
-	justify-content: center;
-	font-size: 12px; /* Adjust the font size as needed */
-  }
-  .credit {
-	color: rgb(255, 253, 253);
-	display:flex;
-	justify-content: center;
-	text-decoration: none;
-   
-  }
-  .credit a {
-	text-decoration: none;
-	color: #a38181;
-  }
-
-  
