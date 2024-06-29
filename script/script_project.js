@@ -1,8 +1,8 @@
 const cardsData1 = [
-    { id: 1, top: 0, left: 0, img: 'https://via.placeholder.com/150', text: 'Programming Language Simple', githubLink: '#' },
-    { id: 2, top: 50, left: 120, img: 'https://via.placeholder.com/150', text: 'Programming Language Concept of DSA/MySQL/DBMS', githubLink: '#' },
-    { id: 3, top: 100, left: 240, img: 'https://via.placeholder.com/150', text: 'Web-Development', githubLink: '#' },
-    { id: 4, top: 150, left: 360, img: 'https://via.placeholder.com/150', text: 'AI/Ml', githubLink: '#' },
+    { id: 1, top: 0, left: 0, img: 'https://via.placeholder.com/150', text: 'Programming Language Simple', githubLink: 'https://github.com/CcpC-cuj/Voice_Bot-Py' },
+    { id: 2, top: 50, left: 120, img: 'https://via.placeholder.com/150', text: 'Programming Language Concept of DSA/MySQL/DBMS', githubLink: 'https://github.com/CcpC-cuj/Algo_Visuals' },
+    { id: 3, top: 100, left: 240, img: 'https://via.placeholder.com/150', text: 'Web-Development', githubLink: 'https://github.com/CcpC-cuj/Webdev' },
+    { id: 4, top: 150, left: 360, img: 'https://via.placeholder.com/150', text: 'AI/Ml', githubLink: 'https://github.com/CcpC-cuj/Climate_Agri_Optimize_Predict' },
     { id: 5, top: 200, left: 480, img: 'https://via.placeholder.com/150', text: 'Graphics', githubLink: '#' },
     { id: 6, top: 250, left: 600, img: 'https://via.placeholder.com/150', text: 'UI/UX', githubLink: '#' }
 ];
