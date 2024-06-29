@@ -1183,10 +1183,18 @@ text-decoration: none; /* Remove underline */
 display: flex;
 justify-content: center;
 }
+
+.mail a{
+  display: flex;
+  justify-content: center;
+  color: rgb(77, 68, 56);
+  margin-top: 10px;
+  padding-right: 5px;
+}
 .copyright {
 display: flex;
 justify-content: center;
-color: antiquewhite;
+color: rgb(75, 60, 41);
 margin-top: 10px;
 padding-right: 5px;
 }

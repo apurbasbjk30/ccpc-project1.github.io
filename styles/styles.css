@@ -307,10 +307,17 @@ li {
     display: flex;
     justify-content: center;
     }
+    .mail a{
+        display: flex;
+        justify-content: center;
+        color: rgb(43, 37, 30);
+        margin-top: 10px;
+        padding-right: 5px;
+    }
     .copyright {
     display: flex;
     justify-content: center;
-    color: antiquewhite;
+    color: rgb(89, 64, 32);
     margin-top: 10px;
     padding-right: 5px;
     }
