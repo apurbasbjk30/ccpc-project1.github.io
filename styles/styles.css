@@ -32,7 +32,7 @@ ul p{
   
 /* For Search button*/
 .searchBox {
-
+    display: none;
     background: #275595;
     height: 30px;
     border-radius: 40px;
@@ -373,6 +373,7 @@ li {
   }
   
   .searchBox {
+    display: none;
     position: relative;
     background: #275595;
     height: 25px;
