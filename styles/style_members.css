@@ -126,6 +126,9 @@
       z-index: 1;
       background-color: black;
   }
+  footer{
+    margin-top: 100%;
+  }
   
   @media (max-width:932px) {
       .members-list {
